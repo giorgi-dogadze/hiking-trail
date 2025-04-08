@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { LanguageToggle } from "@/components/ui/language-toggle";
+import { useTranslation } from 'react-i18next';
+
 import Borjomi from "../../assets/CarouselImages/borjomi.jpg"
 import Borjomi2 from "../../assets/CarouselImages/borjomi2.jpg"
 import Gergeti from "../../assets/CarouselImages/gergeti.jpg"
@@ -22,35 +25,49 @@ import BorjomiKharagauliTrail from "../../assets/HikingRoutes/Borjomi-Kharagauli
 import GergetiTrinityChurchTrail from "../../assets/HikingRoutes/Gergeti Trinity Church Trail.jpeg"
 import TbilisiNationalParkLoop from "../../assets/HikingRoutes/Tbilisi National Park Loop.jpg"
 
-const Header: React.FC = () => (
-    <>
-        <header className="container mx-auto px-4 h-[150px] flex items-center justify-between">
-            <div className="text-2xl font-bold">Hiking Trail</div>
+const Header: React.FC = () => {
+    const { t } = useTranslation();
 
-            <nav className="flex items-center space-x-8">
-                <Link to="/hiking-trails" className="text-lg font-medium hover:text-primary">Hiking Trails</Link>
-                <Link to="/events" className="text-lg font-medium hover:text-primary">Events</Link>
-                <Link to="/equipment" className="text-lg font-medium hover:text-primary">Equipment</Link>
-            </nav>
+    return (
+        <>
+            <header className="container mx-auto px-4 h-[150px] flex items-center justify-between">
+                <div className="text-2xl font-bold">{t('header.title')}</div>
 
-            <div className="flex space-x-4">
-                <Button variant="outline">Log In</Button>
-                <Button>Sign Up</Button>
-            </div>
-        </header>
-        <div className='border-b' />
-    </>
+                <nav className="flex items-center space-x-8">
+                    <Link to="/hiking-trails" className="text-lg font-medium hover:text-primary">
+                        {t('header.nav.hikingTrails')}
+                    </Link>
+                    <Link to="/events" className="text-lg font-medium hover:text-primary">
+                        {t('header.nav.events')}
+                    </Link>
+                    <Link to="/equipment" className="text-lg font-medium hover:text-primary">
+                        {t('header.nav.equipment')}
+                    </Link>
+                </nav>
 
-);
+                <div className="flex space-x-4 items-center">
+                    <LanguageToggle />
+                    <Button variant="outline">{t('header.buttons.login')}</Button>
+                    <Button>{t('header.buttons.signup')}</Button>
+                </div>
+            </header>
+            <div className='border-b' />
+        </>
+    );
+};
 
-const HeroSection: React.FC = () => (
-    <section className="py-20 pb-56 text-center">
-        <h1 className="text-5xl font-bold mb-4">Discover Georgia's Beautiful Trails</h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore the breathtaking landscapes, hidden gems, and unforgettable hiking experiences across Georgia.
-        </p>
-    </section>
-);
+const HeroSection: React.FC = () => {
+    const { t } = useTranslation();
+
+    return (
+        <section className="py-20 pb-56 text-center">
+            <h1 className="text-5xl font-bold mb-4">{t('hero.title')}</h1>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                {t('hero.description')}
+            </p>
+        </section>
+    );
+};
 
 const ImageSlider: React.FC = () => {
     const images = [
@@ -193,38 +210,39 @@ const ImageSlider: React.FC = () => {
 };
 
 const ExploreGeorgia: React.FC = () => {
+    const { t } = useTranslation();
+
     const blogs = [
         {
-            title: "Mountain Peaks of Kazbegi",
-            description: "Discover the majestic mountains and trails around Mount Kazbegi.",
+            title: t('exploreGeorgia.blogs.kazbegi.title'),
+            description: t('exploreGeorgia.blogs.kazbegi.description'),
             image: MountainPeaksOfKazbegi,
             date: "May 15, 2023",
         },
         {
-            title: "Hidden Waterfalls of Martvili",
-            description: "Experience the serene beauty of Martvili's secret waterfall trails.",
+            title: t('exploreGeorgia.blogs.martvili.title'),
+            description: t('exploreGeorgia.blogs.martvili.description'),
             image: HiddenWaterfallsOfMartvili,
             date: "June 22, 2023",
         },
         {
-            title: "Wildlife Encounters in Borjomi",
-            description: "Your guide to spotting Georgia's diverse wildlife on Borjomi trails.",
+            title: t('exploreGeorgia.blogs.borjomi.title'),
+            description: t('exploreGeorgia.blogs.borjomi.description'),
             image: WildlifeEncountersInBorjomi,
             date: "July 8, 2023",
         },
         {
-            title: "Autumn Trails of Kakheti",
-            description: "The best hiking experiences in Georgia's wine country during fall.",
+            title: t('exploreGeorgia.blogs.kakheti.title'),
+            description: t('exploreGeorgia.blogs.kakheti.description'),
             image: AutumnTrailsOfKakheti,
             date: "September 30, 2023",
         },
     ];
 
-
     return (
         <section className="py-20 pt-56">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-center mb-12">Explore Georgia</h2>
+                <h2 className="text-3xl font-bold text-center mb-12">{t('exploreGeorgia.title')}</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {blogs.map((blog, index) => (
@@ -247,7 +265,7 @@ const ExploreGeorgia: React.FC = () => {
                                 <p>{blog.description}</p>
                             </CardContent>
                             <CardFooter>
-                                <Button variant="link" className="ml-auto">Read More</Button>
+                                <Button variant="link" className="ml-auto">{t('exploreGeorgia.readMore')}</Button>
                             </CardFooter>
                         </Card>
                     ))}
@@ -258,6 +276,17 @@ const ExploreGeorgia: React.FC = () => {
 };
 
 const BestHikingRoutes: React.FC = () => {
+    const { t } = useTranslation();
+
+    const getDifficultyTranslation = (difficulty: string) => {
+        switch (difficulty.toLowerCase()) {
+            case 'easy': return t('hikingRoutes.difficulty.easy');
+            case 'moderate': return t('hikingRoutes.difficulty.moderate');
+            case 'hard': return t('hikingRoutes.difficulty.hard');
+            default: return difficulty;
+        }
+    };
+
     const topRoutes = [
         {
             name: "Gergeti Trinity Church Trail",
@@ -285,7 +314,7 @@ const BestHikingRoutes: React.FC = () => {
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-center mb-12">Best Hiking Routes</h2>
+                <h2 className="text-3xl font-bold text-center mb-12">{t('hikingRoutes.title')}</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {topRoutes.map((route, index) => (
@@ -311,12 +340,12 @@ const BestHikingRoutes: React.FC = () => {
                                         <span className="font-medium">{route.rating}</span>
                                     </div>
                                     <span className="bg-gray-100 px-3 py-1 rounded-full text-sm">
-                                        {route.difficulty}
+                                        {getDifficultyTranslation(route.difficulty)}
                                     </span>
                                 </div>
                             </CardContent>
                             <CardFooter>
-                                <Button className="w-full">View Route</Button>
+                                <Button className="w-full">{t('hikingRoutes.viewRoute')}</Button>
                             </CardFooter>
                         </Card>
                     ))}
@@ -327,6 +356,8 @@ const BestHikingRoutes: React.FC = () => {
 };
 
 const Testimonials: React.FC = () => {
+    const { t } = useTranslation();
+
     const feedback = [
         {
             name: "Ana Kalandadze",
@@ -348,7 +379,7 @@ const Testimonials: React.FC = () => {
     return (
         <section className="py-20">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-center mb-12">What Our Hikers Say</h2>
+                <h2 className="text-3xl font-bold text-center mb-12">{t('testimonials.title')}</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {feedback.map((item, index) => (
@@ -379,72 +410,80 @@ const Testimonials: React.FC = () => {
     );
 };
 
-const CTASection: React.FC = () => (
-    <section className="bg-[#2B6BE7] py-20 text-white">
-        <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready for Your Next Adventure?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Join thousands of hikers exploring the beautiful trails of Georgia. Sign up today and start planning your next hike!
-            </p>
-            <div className="space-x-4">
-                <Button variant="default" className="bg-white text-blue-600 hover:bg-gray-100">
-                    Sign Up Now
-                </Button>
-                <Button variant="outline" className="border-white text-blue-600 hover:bg-gray-100">
-                    Learn More
-                </Button>
-            </div>
-        </div>
-    </section>
-);
+const CTASection: React.FC = () => {
+    const { t } = useTranslation();
 
-const Footer: React.FC = () => (
-    <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 className="text-xl font-bold mb-4">Hiking Trail</h3>
-                    <p className="text-gray-400">
-                        Discover Georgia's most beautiful hiking routes and outdoor adventures.
-                    </p>
+    return (
+        <section className="bg-[#2B6BE7] py-20 text-white">
+            <div className="container mx-auto px-4 text-center">
+                <h2 className="text-3xl font-bold mb-4">{t('cta.title')}</h2>
+                <p className="text-xl mb-8 max-w-2xl mx-auto">
+                    {t('cta.description')}
+                </p>
+                <div className="space-x-4">
+                    <Button variant="default" className="bg-white text-blue-600 hover:bg-gray-100">
+                        {t('cta.signUp')}
+                    </Button>
+                    <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                        {t('cta.learnMore')}
+                    </Button>
                 </div>
-                <div>
-                    <h4 className="font-bold mb-4">Quick Links</h4>
-                    <ul className="space-y-2">
-                        <li><Link to="/hiking-trails" className="text-gray-400 hover:text-white">Hiking Trails</Link></li>
-                        <li><Link to="/events" className="text-gray-400 hover:text-white">Events</Link></li>
-                        <li><Link to="/equipment" className="text-gray-400 hover:text-white">Equipment</Link></li>
-                        <li><Link to="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-                    </ul>
+            </div>
+        </section>
+    );
+};
+
+const Footer: React.FC = () => {
+    const { t } = useTranslation();
+
+    return (
+        <footer className="bg-gray-900 text-white py-12">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 className="text-xl font-bold mb-4">{t('header.title')}</h3>
+                        <p className="text-gray-400">
+                            {t('footer.description')}
+                        </p>
+                    </div>
+                    <div>
+                        <h4 className="font-bold mb-4">{t('footer.quickLinks')}</h4>
+                        <ul className="space-y-2">
+                            <li><Link to="/hiking-trails" className="text-gray-400 hover:text-white">{t('header.nav.hikingTrails')}</Link></li>
+                            <li><Link to="/events" className="text-gray-400 hover:text-white">{t('header.nav.events')}</Link></li>
+                            <li><Link to="/equipment" className="text-gray-400 hover:text-white">{t('header.nav.equipment')}</Link></li>
+                            <li><Link to="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold mb-4">{t('footer.resources')}</h4>
+                        <ul className="space-y-2">
+                            <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
+                            <li><Link to="/safety-tips" className="text-gray-400 hover:text-white">Safety Tips</Link></li>
+                            <li><Link to="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
+                            <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact Us</Link></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold mb-4">{t('footer.stayConnected')}</h4>
+                        <div className="flex space-x-4">
+                            <a href="#" className="text-gray-400 hover:text-white">Facebook</a>
+                            <a href="#" className="text-gray-400 hover:text-white">Instagram</a>
+                            <a href="#" className="text-gray-400 hover:text-white">Twitter</a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h4 className="font-bold mb-4">Resources</h4>
-                    <ul className="space-y-2">
-                        <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
-                        <li><Link to="/safety-tips" className="text-gray-400 hover:text-white">Safety Tips</Link></li>
-                        <li><Link to="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
-                        <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact Us</Link></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="font-bold mb-4">Stay Connected</h4>
-                    <div className="flex space-x-4">
-                        <a href="#" className="text-gray-400 hover:text-white">Facebook</a>
-                        <a href="#" className="text-gray-400 hover:text-white">Instagram</a>
-                        <a href="#" className="text-gray-400 hover:text-white">Twitter</a>
+                <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                    <p>© {new Date().getFullYear()} {t('header.title')}. {t('footer.allRightsReserved')}</p>
+                    <div className="mt-2 space-x-4">
+                        <Link to="/terms" className="hover:text-white">{t('footer.terms')}</Link>
+                        <Link to="/privacy" className="hover:text-white">{t('footer.privacy')}</Link>
                     </div>
                 </div>
             </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>© {new Date().getFullYear()} Hiking Trail. All rights reserved.</p>
-                <div className="mt-2 space-x-4">
-                    <Link to="/terms" className="hover:text-white">Terms of Service</Link>
-                    <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
-                </div>
-            </div>
-        </div>
-    </footer>
-);
+        </footer>
+    );
+};
 
 const Landing: React.FC = () => {
     return (

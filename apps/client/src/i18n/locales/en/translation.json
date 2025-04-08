@@ -1,0 +1,67 @@
+{
+  "header": {
+    "title": "Hiking Trail",
+    "nav": {
+      "hikingTrails": "Hiking Trails",
+      "events": "Events",
+      "equipment": "Equipment"
+    },
+    "buttons": {
+      "login": "Log In",
+      "signup": "Sign Up"
+    }
+  },
+  "hero": {
+    "title": "Discover Georgia's Beautiful Trails",
+    "description": "Explore the breathtaking landscapes, hidden gems, and unforgettable hiking experiences across Georgia."
+  },
+  "exploreGeorgia": {
+    "title": "Explore Georgia",
+    "readMore": "Read More",
+    "blogs": {
+      "kazbegi": {
+        "title": "Mountain Peaks of Kazbegi",
+        "description": "Discover the majestic mountains and trails around Mount Kazbegi."
+      },
+      "martvili": {
+        "title": "Hidden Waterfalls of Martvili",
+        "description": "Experience the serene beauty of Martvili's secret waterfall trails."
+      },
+      "borjomi": {
+        "title": "Wildlife Encounters in Borjomi",
+        "description": "Your guide to spotting Georgia's diverse wildlife on Borjomi trails."
+      },
+      "kakheti": {
+        "title": "Autumn Trails of Kakheti",
+        "description": "The best hiking experiences in Georgia's wine country during fall."
+      }
+    }
+  },
+  "hikingRoutes": {
+    "title": "Best Hiking Routes",
+    "viewRoute": "View Route",
+    "difficulty": {
+      "easy": "Easy",
+      "moderate": "Moderate",
+      "hard": "Hard"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Hikers Say"
+  },
+  "cta": {
+    "title": "Ready for Your Next Adventure?",
+    "description": "Join thousands of hikers exploring the beautiful trails of Georgia. Sign up today and start planning your next hike!",
+    "signUp": "Sign Up Now",
+    "learnMore": "Learn More"
+  },
+  "footer": {
+    "description": "Discover Georgia's most beautiful hiking routes and outdoor adventures.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "stayConnected": "Stay Connected",
+    "allRightsReserved": "All rights reserved.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  }
+}
