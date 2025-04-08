@@ -3,6 +3,24 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Borjomi from "../../assets/CarouselImages/borjomi.jpg"
+import Borjomi2 from "../../assets/CarouselImages/borjomi2.jpg"
+import Gergeti from "../../assets/CarouselImages/gergeti.jpg"
+import Juta from "../../assets/CarouselImages/juta.jpg"
+import Lagodekhi from "../../assets/CarouselImages/lagodekhi.jpg"
+import Lake from "../../assets/CarouselImages/lake.jpg"
+import Montains from "../../assets/CarouselImages/montains.jpg"
+import Some from "../../assets/CarouselImages/some other.jpg"
+import Tobavarchkhli from "../../assets/CarouselImages/tobavarchkhli.jpg"
+
+import AutumnTrailsOfKakheti from "../../assets/ExploreGeorgiaCardImages/Autumn Trails of Kakheti.jpg"
+import HiddenWaterfallsOfMartvili from "../../assets/ExploreGeorgiaCardImages/Hidden Waterfalls of Martvili.jpg"
+import MountainPeaksOfKazbegi from "../../assets/ExploreGeorgiaCardImages/Mountain Peaks of Kazbegi.jpeg"
+import WildlifeEncountersInBorjomi from "../../assets/ExploreGeorgiaCardImages/Wildlife Encounters in Borjomi.jpg"
+
+import BorjomiKharagauliTrail from "../../assets/HikingRoutes/Borjomi-Kharagauli Trail.jpg"
+import GergetiTrinityChurchTrail from "../../assets/HikingRoutes/Gergeti Trinity Church Trail.jpeg"
+import TbilisiNationalParkLoop from "../../assets/HikingRoutes/Tbilisi National Park Loop.jpg"
 
 const Header: React.FC = () => (
     <>
@@ -26,7 +44,7 @@ const Header: React.FC = () => (
 );
 
 const HeroSection: React.FC = () => (
-    <section className="py-20 text-center">
+    <section className="py-20 pb-56 text-center">
         <h1 className="text-5xl font-bold mb-4">Discover Georgia's Beautiful Trails</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Explore the breathtaking landscapes, hidden gems, and unforgettable hiking experiences across Georgia.
@@ -36,46 +54,141 @@ const HeroSection: React.FC = () => (
 
 const ImageSlider: React.FC = () => {
     const images = [
-        "/images/borjomi.jpg",
-        "/images/borjomi2.jpg",
-        "/images/gergeti.jpg",
-        "/images/juta.jpg",
-        "/images/lagodekhi.jpg",
-        "/images/lake.jpg",
-        "/images/montains.jpg",
-        "/images/some other.jpg",
-        "/images/tobavarchkhli.jpg",
-
+        Borjomi,
+        Borjomi2,
+        Gergeti,
+        Juta,
+        Lagodekhi,
+        Lake,
+        Montains,
+        Some,
+        Tobavarchkhli
     ];
 
+    const [api, setApi] = useState<any>(null);
+    const [current, setCurrent] = useState(0);
+
+    React.useEffect(() => {
+        if (!api) return;
+
+        // Update current slide index when it changes
+        const onSelect = () => {
+            setCurrent(api.selectedScrollSnap());
+        };
+        api.on("select", onSelect);
+
+        // Set up the auto-scroll interval with a slower speed (5 seconds)
+        const autoScrollInterval = setInterval(() => {
+            const totalSlides = images.length;
+
+            // Get the current position of the carousel
+            const currentPosition = api.selectedScrollSnap();
+
+            // Move to the next slide
+            if (currentPosition < totalSlides - 1) {
+                api.scrollNext();
+            } else {
+                // When at the last slide, smoothly move back to the first slide
+                // We can't just jump to the first slide as it would be abrupt
+                // Instead, we'll manually control the scroll position
+
+                // Create a smooth animation from last to first slide
+                let startTime: number | null = null;
+                const duration = 800; // Increased transition duration for smoother experience
+
+                const animateScroll = (timestamp: number) => {
+                    if (!startTime) startTime = timestamp;
+                    const elapsed = timestamp - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+
+                    api.scrollTo(0, { immediate: true }); // Scroll to first position
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animateScroll);
+                    }
+                };
+
+                requestAnimationFrame(animateScroll);
+            }
+        }, 5000);
+
+        return () => {
+            api.off("select", onSelect);
+            clearInterval(autoScrollInterval);
+        };
+    }, [api, images.length]);
+
     return (
-        <section className="bg-blue-600 py-16">
-            <div className="container mx-auto px-4">
-                <Carousel className="w-full max-w-4xl mx-auto">
-                    <CarouselContent>
-                        {images.map((image, index) => (
-                            <CarouselItem key={index}>
-                                <div className="p-1">
-                                    <div className="overflow-hidden rounded-lg">
-                                        <img
-                                            src={image}
-                                            alt={`Scenic View ${index + 1}`}
-                                            className="w-full h-[400px] object-cover"
-                                            // Placeholder image if actual images aren't available
-                                            onError={(e) => {
-                                                e.currentTarget.src = `https://images.unsplash.com/photo-${1500000000000 + index}?q=80&w=800&auto=format`;
-                                            }}
-                                        />
+        <div className="relative">
+            {/* Top curved divider with more pronounced curve */}
+            <svg
+                className="absolute top-0 left-0 w-full transform translate-y-[-98%] rotate-180"
+                height="150" /* Increased height for more pronounced curve */
+                fill="none"
+                preserveAspectRatio="none"
+                viewBox="0 0 1200 150" /* Adjusted viewBox to match height */
+                xmlns="http://www.w3.org/2000/svg"
+                data-qa='giorgi'
+            >
+                <path
+                    d="M0 150C300 30 900 30 1200 150V0H0V150Z" /* More dramatic curve */
+                    fill="#2B6BE7"
+                />
+            </svg>
+
+            {/* Main content with blue background */}
+            <section className="bg-[#2B6BE7] px-4 ">
+                <div className="container mx-auto">
+                    <Carousel
+                        className="w-full max-w-7xl mx-auto"
+                        setApi={setApi}
+                        opts={{
+                            loop: true,
+                            align: "start"
+                        }}
+                    >
+                        <CarouselContent>
+                            {images.map((image, index) => (
+                                <CarouselItem key={index}>
+                                    <div className="p-1">
+                                        <div className="overflow-hidden rounded-4xl h-[700px] shadow-lg">
+                                            <img
+                                                src={image}
+                                                alt={`Scenic View ${index + 1}`}
+                                                className="w-full h-full object-cover"
+                                                onError={(e) => {
+                                                    const target = e.currentTarget;
+                                                    console.log(`Failed to load image ${index}`);
+                                                    target.src = `https://images.unsplash.com/photo-${1500000000000 + index}?q=80&w=800&auto=format`;
+                                                    target.onerror = null; // Prevent infinite loop
+                                                }}
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-4" />
-                    <CarouselNext className="right-4" />
-                </Carousel>
-            </div>
-        </section>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="left-4 w-[50px] h-[50px]" />
+                        <CarouselNext className="right-4 w-[50px] h-[50px]" />
+                    </Carousel>
+                </div>
+            </section>
+
+            {/* Bottom curved divider with more pronounced curve */}
+            <svg
+                className="absolute bottom-0 left-0 w-full transform translate-y-[98%] rotate-180"
+                height="150" /* Increased height for more pronounced curve */
+                fill="none"
+                preserveAspectRatio="none"
+                viewBox="0 0 1200 150" /* Adjusted viewBox to match height */
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M0 0C300 120 900 120 1200 0V150H0V0Z" /* More dramatic curve */
+                    fill="#2B6BE7"
+                />
+            </svg>
+        </div>
     );
 };
 
@@ -84,37 +197,38 @@ const ExploreGeorgia: React.FC = () => {
         {
             title: "Mountain Peaks of Kazbegi",
             description: "Discover the majestic mountains and trails around Mount Kazbegi.",
-            image: "/images/blog1.jpg",
+            image: MountainPeaksOfKazbegi,
             date: "May 15, 2023",
         },
         {
             title: "Hidden Waterfalls of Martvili",
             description: "Experience the serene beauty of Martvili's secret waterfall trails.",
-            image: "/images/blog2.jpg",
+            image: HiddenWaterfallsOfMartvili,
             date: "June 22, 2023",
         },
         {
             title: "Wildlife Encounters in Borjomi",
             description: "Your guide to spotting Georgia's diverse wildlife on Borjomi trails.",
-            image: "/images/blog3.jpg",
+            image: WildlifeEncountersInBorjomi,
             date: "July 8, 2023",
         },
         {
             title: "Autumn Trails of Kakheti",
             description: "The best hiking experiences in Georgia's wine country during fall.",
-            image: "/images/blog4.jpg",
+            image: AutumnTrailsOfKakheti,
             date: "September 30, 2023",
         },
     ];
 
+
     return (
-        <section className="py-20">
+        <section className="py-20 pt-56">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-12">Explore Georgia</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {blogs.map((blog, index) => (
-                        <Card key={index} className="overflow-hidden">
+                        <Card key={index} className="overflow-hidden p-0">
                             <div className="h-48 overflow-hidden">
                                 <img
                                     src={blog.image}
@@ -150,21 +264,21 @@ const BestHikingRoutes: React.FC = () => {
             location: "Kazbegi",
             rating: 4.9,
             difficulty: "Moderate",
-            image: "/images/route1.jpg",
+            image: GergetiTrinityChurchTrail
         },
         {
             name: "Tbilisi National Park Loop",
             location: "Tbilisi",
             rating: 4.8,
             difficulty: "Easy",
-            image: "/images/route2.jpg",
+            image: TbilisiNationalParkLoop
         },
         {
             name: "Borjomi-Kharagauli Trail",
             location: "Borjomi",
             rating: 4.7,
             difficulty: "Hard",
-            image: "/images/route3.jpg",
+            image: BorjomiKharagauliTrail
         },
     ];
 
@@ -175,7 +289,7 @@ const BestHikingRoutes: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {topRoutes.map((route, index) => (
-                        <Card key={index} className="overflow-hidden">
+                        <Card key={index} className="overflow-hidden p-0 pb-6">
                             <div className="h-56 overflow-hidden">
                                 <img
                                     src={route.image}
@@ -266,7 +380,7 @@ const Testimonials: React.FC = () => {
 };
 
 const CTASection: React.FC = () => (
-    <section className="bg-blue-600 py-20 text-white">
+    <section className="bg-[#2B6BE7] py-20 text-white">
         <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready for Your Next Adventure?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -276,7 +390,7 @@ const CTASection: React.FC = () => (
                 <Button variant="default" className="bg-white text-blue-600 hover:bg-gray-100">
                     Sign Up Now
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-blue-700">
+                <Button variant="outline" className="border-white text-blue-600 hover:bg-gray-100">
                     Learn More
                 </Button>
             </div>
