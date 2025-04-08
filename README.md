@@ -7,7 +7,6 @@ Welcome to the Hiking Trail project! This repository contains resources for hike
 - Trail discovery and recommendations
 - Trail difficulty ratings and information
 - User reviews and photos
-- Weather integration for trail conditions
 
 ## Installation
 
@@ -39,6 +38,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Your Name - your.email@example.com
-
-Project Link: [https://github.com/yourusername/hiking-trail](https://github.com/yourusername/hiking-trail)
+Your Name - g.dogadze@gmail.com
