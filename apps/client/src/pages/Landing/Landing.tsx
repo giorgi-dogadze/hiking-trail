@@ -83,7 +83,7 @@ const ImageSlider: React.FC = () => {
     ];
 
     const [api, setApi] = useState<any>(null);
-    const [current, setCurrent] = useState(0);
+    const [_, setCurrent] = useState(0);
 
     React.useEffect(() => {
         if (!api) return;
