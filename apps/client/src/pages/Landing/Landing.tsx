@@ -1,12 +1,11 @@
 import React, { memo } from 'react';
-import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { ImageSlider } from './components/ImageSlider';
 import { ExploreGeorgia } from './components/ExploreGeorgia';
 import { BestHikingRoutes } from './components/BestHikingRoutes';
 import { Testimonials } from './components/Testimonials';
 import { CTASection } from './components/CTASection';
-import { Footer } from './components/Footer';
+import { Footer, Header } from '../../components/core';
 
 const Landing: React.FC = () => {
     return (
