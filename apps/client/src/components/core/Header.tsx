@@ -16,7 +16,9 @@ export const Header: React.FC = () => {
     return (
         <>
             <header className="container mx-auto px-4 h-[80px] md:h-[120px] lg:h-[150px] flex items-center justify-between relative">
-                <div className="text-xl sm:text-2xl font-bold">{t('header.title')}</div>
+                <Link to="/" >
+                    <div className="text-xl sm:text-2xl font-bold">{t('header.title')}</div>
+                </Link>
 
                 {/* Mobile menu button */}
                 <button

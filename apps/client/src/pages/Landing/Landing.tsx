@@ -9,7 +9,7 @@ import { Footer, Header } from '../../components/core';
 
 const Landing: React.FC = () => {
     return (
-        <div className="landing-page">
+        <div>
             <Header />
             <HeroSection />
             <ImageSlider />
