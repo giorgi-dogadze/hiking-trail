@@ -1,114 +1,115 @@
-enum DifficultyLevel {
-    Easy = "Easy",
-    Moderate = "Moderate",
-    Difficult = "Difficult",
-  }
-  
-  enum RecommendedExperience {
-    Beginner = "Beginner",
-    Intermediate = "Intermediate",
-    Experienced = "Experienced",
-  }
-  
-  enum TrailType {
-    Loop = "Loop",
-    OutAndBack = "Out and back",
-    PointToPoint = "Point-to-point",
-  }
-  
-  enum LengthUnit {
-    Kilometers = "km",
-    Miles = "miles",
-  }
-  
-  enum ElevationUnit {
-    Meters = "m",
-    Feet = "ft",
-  }
-  
-  enum TimeUnit {
-    Hours = "hours",
-    Days = "days",
-  }
-  
-  interface Coordinates {
-    latitude: number;
-    longitude: number;
-  }
-  
-  interface StartingPoint {
-    name: string;
-    coordinates: Coordinates;
-    googleMapsUrl: string;
-  }
-  
-  interface Difficulty {
-    level: DifficultyLevel;
-    technicalDifficulty: number;
-    physicalDemand: number;
-    recommendedExperience: RecommendedExperience;
-  }
-  
-  interface EstimatedTime {
-    minimum: number;
-    maximum: number;
-    timeUnit: TimeUnit;
-  }
-  
-  interface Seasons {
-    spring: boolean;
-    summer: boolean;
-    autumn: boolean;
-    winter: boolean;
-    bestSeason: string[];
-  }
-  
-  interface Facilities {
-    waterAvailability: string;
-    restroomAccess: boolean | string;
-    parkingAvailable: boolean;
-    publicTransportAccess: boolean | string;
-  }
-  
-  interface CrowdLevel {
-    weekday: string;
-    weekend: string;
-    peakSeason: string;
-  }
-  
-  export interface HikingTrail {
-    id: number;
-    title: string;
-    description: string;
-    region: string;
-    difficulty: Difficulty;
-    length: number;
-    lengthUnit: LengthUnit;
-    heightUp: number;
-    heightDown: number;
-    elevationUnit: ElevationUnit;
-    estimatedTime: EstimatedTime;
-    trailType: TrailType;
-    terrain: string[];
-    seasons: Seasons;
-    facilities: Facilities;
-    trailCondition: string;
-    campingOptions: string;
-    crowdLevel: CrowdLevel;
-    familyFriendly: boolean;
-    dogFriendly: boolean;
-    wheelchairAccessible: string;
-    hikingPoles: string;
-    highlights: string[];
-    hazards: string[];
-    nearbyAttractions: string[];
-    startingPoint: StartingPoint;
-    endPoint: string | StartingPoint;
-    cellPhoneReception: string;
-    imageUrl: string;
-    tags: string[];
-    permitRequired?: boolean;
-    equipmentNeeded?: string[];
-    entranceFee?: boolean;
-  }
-  
+export enum DifficultyLevel {
+  Easy = "Easy",
+  Moderate = "Moderate",
+  Difficult = "Difficult",
+}
+
+export enum RecommendedExperience {
+  Beginner = "Beginner",
+  Intermediate = "Intermediate",
+  Experienced = "Experienced",
+  Advanced='Advanced'
+}
+
+export enum TrailType {
+  Loop = "Loop",
+  OutAndBack = "Out and back",
+  PointToPoint = "Point-to-point",
+  Linear="Linear"
+}
+
+export enum LengthUnit {
+  Kilometers = "km",
+  Miles = "miles",
+}
+
+export enum ElevationUnit {
+  Meters = "m",
+  Feet = "ft",
+}
+
+export enum TimeUnit {
+  Hours = "hours",
+  Days = "days",
+}
+
+interface Coordinates {
+  latitude: number;
+  longitude: number;
+}
+
+interface StartingPoint {
+  name: string;
+  coordinates: Coordinates;
+  googleMapsUrl: string;
+}
+
+interface Difficulty {
+  level: DifficultyLevel;
+  technicalDifficulty: number;
+  physicalDemand: number;
+  recommendedExperience: RecommendedExperience;
+}
+
+interface EstimatedTime {
+  minimum: number;
+  maximum: number;
+  timeUnit: TimeUnit;
+}
+
+interface Seasons {
+  spring: boolean;
+  summer: boolean;
+  autumn: boolean;
+  winter: boolean;
+  bestSeason: string[];
+}
+
+interface Facilities {
+  waterAvailability: string;
+  restroomAccess: boolean | string;
+  parkingAvailable: boolean | string;
+  publicTransportAccess: boolean | string;
+}
+
+interface CrowdLevel {
+  weekday: string;
+  weekend: string;
+  peakSeason: string;
+}
+
+export interface HikingTrail {
+  id: number;
+  title: string;
+  description: string;
+  region: string;
+  difficulty: Difficulty;
+  length: number;
+  lengthUnit: LengthUnit;
+  heightUp: number;
+  heightDown: number;
+  elevationUnit: ElevationUnit;
+  estimatedTime: EstimatedTime;
+  trailType: TrailType;
+  terrain: string[];
+  seasons: Seasons;
+  facilities: Facilities;
+  trailCondition: string;
+  campingOptions: string;
+  crowdLevel: CrowdLevel;
+  familyFriendly: boolean;
+  dogFriendly: boolean;
+  wheelchairAccessible: string;
+  hikingPoles: string;
+  highlights: string[];
+  hazards: string[];
+  nearbyAttractions: string[];
+  startingPoint: StartingPoint;
+  endPoint: string | StartingPoint;
+  cellPhoneReception: string;
+  imageUrl: string;
+  tags: string[];
+  permitRequired?: boolean;
+  equipmentNeeded?: string[];
+  entranceFee?: boolean;
+}
