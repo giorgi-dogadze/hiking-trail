@@ -7,6 +7,32 @@ import {
   TimeUnit,
   TrailType,
 } from "./types";
+import AlgetiNationalParkForestCircuit from "../../assets/TrailImages/Algeti National Park Forest Circuit.jpg";
+import AragviRiverGorgeTrail from "../../assets/TrailImages/Aragvi River Gorge Trail.jpeg";
+import BatumiGreenCapeBotanicalGardenPath from "../../assets/TrailImages/Batumi Green Cape Botanical Garden Path.jpg";
+import BlackSeaCoastalPath from "../../assets/TrailImages/Black Sea Coastal Path.jpeg";
+import BorjomiKharagauliNationalParkLoop from "../../assets/TrailImages/Borjomi-Kharagauli National Park Loop.jpg";
+import ChalaadiGlacierRoute from "../../assets/TrailImages/Chalaadi Glacier Route.jpeg";
+import DavidGarejaMonasteryRidgeWalk from "../../assets/TrailImages/David Gareja Monastery Ridge Walk.jpg";
+import DidgoriBattlefieldHeritagePath from "../../assets/TrailImages/Didgori Battlefield Heritage Path.jpg";
+import GergetiTrinityChurchTrail from "../../assets/TrailImages/Gergeti Trinity Church Trail 2.jpeg";
+import JavakhetiLakesCircuit from "../../assets/TrailImages/Javakheti Lakes Circuit.jpeg";
+import KazbegiGlacierTrail from "../../assets/TrailImages/Kazbegi Glacier Trail.jpeg";
+import KheviKhevsuretiConnectRoute from "../../assets/TrailImages/Khevi-Khevsureti Connect Route.jpg";
+import KhevsuretiMountainPassTrek from "../../assets/TrailImages/Khevi-Khevsureti Connect Route.jpg";
+import LagodekhiWaterfallTrek from "../../assets/TrailImages/Lagodekhi Waterfall Trek.jpeg";
+import MachakhelaNationalParkRiverTrail from "../../assets/TrailImages/Machakhela National Park River Trail.jpg";
+import MartviliCanyonCircuit from "../../assets/TrailImages/Martvili Canyon Circuit.jpg";
+import MestiaToUshguliTrek from "../../assets/TrailImages/Svaneti Mestia to Ushguli Trek.jpeg";
+import PrometheusCaveAndCanyonTrail from "../../assets/TrailImages/Prometheus Cave and Canyon Trail.jpg";
+import PshavKhevsuretiRangeTraverse from "../../assets/TrailImages/Pshav-Khevsureti Range Traverse.jpg";
+import RachaAlpineMeadowsTrek from "../../assets/TrailImages/Racha Alpine Meadows Trek.jpeg";
+import TedzamiRiverValleyPath from "../../assets/TrailImages/Lagodekhi Waterfall Trek.jpeg";
+import TrusoValleyExpedition from "../../assets/TrailImages/Truso Valley Expedition.jpeg";
+import TushetiOmaloToDartloTrek from "../../assets/TrailImages/Tusheti Omalo to Dartlo Trek.jpeg";
+import VardziaCaveCityAndKhertvisiLoop from "../../assets/TrailImages/Vardzia Cave City and Khertvisi Loop.jpg";
+import VashlovaniNationalParkSafariRoute from "../../assets/TrailImages/Vashlovani National Park Safari Route.jpeg";
+import TbilisiBotanicGarden from "../../assets/TrailImages/Tbilisi National Park Loop.jpg";
 
 export const trails: HikingTrail[] = [
   {
@@ -75,7 +101,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (loop trail)",
     cellPhoneReception: "Excellent throughout",
-    imageUrl: "https://example.com/images/tbilisi-botanical-garden.jpg",
+    image: TbilisiBotanicGarden,
     tags: [
       "Urban",
       "Family-friendly",
@@ -173,7 +199,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (out and back trail)",
     cellPhoneReception: "Spotty, unreliable near glacier",
-    imageUrl: "https://example.com/images/kazbegi-glacier.jpg",
+    image: KazbegiGlacierTrail,
     tags: [
       "Glacier",
       "Mountain",
@@ -265,7 +291,7 @@ export const trails: HikingTrail[] = [
     permitRequired: true,
     cellPhoneReception:
       "Very limited, emergency satellite communication recommended",
-    imageUrl: "https://example.com/images/borjomi-kharagauli.jpg",
+    image: BorjomiKharagauliNationalParkLoop,
     tags: [
       "Multi-day",
       "Wildlife",
@@ -341,7 +367,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (loop trail)",
     cellPhoneReception: "Excellent throughout",
-    imageUrl: "https://example.com/images/batumi-botanical.jpg",
+    image: BatumiGreenCapeBotanicalGardenPath,
     tags: [
       "Botanical",
       "Coastal",
@@ -438,7 +464,7 @@ export const trails: HikingTrail[] = [
       googleMapsUrl: "https://goo.gl/maps/ushgulivillage",
     },
     cellPhoneReception: "Limited to villages only",
-    imageUrl: "https://example.com/images/mestia-ushguli.jpg",
+    image:MestiaToUshguliTrek,
     tags: [
       "Multi-day",
       "Cultural",
@@ -526,7 +552,7 @@ export const trails: HikingTrail[] = [
     endPoint: "Same as starting point (loop trail)",
     permitRequired: true,
     cellPhoneReception: "None, satellite communication recommended",
-    imageUrl: "https://example.com/images/vashlovani.jpg",
+    image: VashlovaniNationalParkSafariRoute,
     tags: [
       "Desert",
       "Wildlife",
@@ -603,7 +629,7 @@ export const trails: HikingTrail[] = [
     endPoint: "Same as starting point (loop trail)",
     entranceFee: true,
     cellPhoneReception: "Good throughout",
-    imageUrl: "https://example.com/images/martvili.jpg",
+    image:MartviliCanyonCircuit,
     tags: [
       "Canyon",
       "Water features",
@@ -684,7 +710,7 @@ export const trails: HikingTrail[] = [
     endPoint: "Same as starting point (out and back trail)",
     permitRequired: true,
     cellPhoneReception: "Good near trailhead, spotty near waterfall",
-    imageUrl: "https://example.com/images/lagodekhi.jpg",
+    image: LagodekhiWaterfallTrek,
     tags: ["Waterfall", "Forest", "Protected area", "Day hike", "River"],
   },
   {
@@ -757,7 +783,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Dartlo Village",
     cellPhoneReception: "Limited, stronger at high points",
-    imageUrl: "https://example.com/images/tusheti-omalo-dartlo.jpg",
+    image:TushetiOmaloToDartloTrek,
     tags: [
       "Cultural heritage",
       "Mountain",
@@ -835,7 +861,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (out and back trail)",
     cellPhoneReception: "Good throughout",
-    imageUrl: "https://example.com/images/gergeti-trinity-church-trail.jpg",
+    image:GergetiTrinityChurchTrail,
     tags: ["Church", "Mountain views", "Iconic", "Day hike", "Cultural site"],
   },
   {
@@ -908,7 +934,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (loop trail)",
     cellPhoneReception: "Spotty, best at higher points",
-    imageUrl: "https://example.com/images/algeti-forest-circuit.jpg",
+    image: AlgetiNationalParkForestCircuit,
     tags: [
       "Forest",
       "Wildlife",
@@ -992,7 +1018,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (out and back trail)",
     cellPhoneReception: "Very limited to none",
-    imageUrl: "https://example.com/images/truso-valley-expedition.jpg",
+    image: TrusoValleyExpedition,
     tags: [
       "Remote",
       "Valley",
@@ -1076,7 +1102,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (out and back trail)",
     cellPhoneReception: "Limited in forest, better in open areas",
-    imageUrl: "https://example.com/images/chalaadi-glacier-route.jpg",
+    image:ChalaadiGlacierRoute,
     tags: ["Glacier", "Forest", "Alpine", "Ice features", "Day hike"],
   },
   {
@@ -1150,7 +1176,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (loop trail)",
     cellPhoneReception: "Good throughout",
-    imageUrl: "https://example.com/images/david-gareja-ridge-walk.jpg",
+    image:DavidGarejaMonasteryRidgeWalk,
     tags: [
       "Monastery",
       "Desert",
@@ -1238,7 +1264,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (loop trail)",
     cellPhoneReception: "Good outside cave, none inside",
-    imageUrl: "https://example.com/images/prometheus-cave-canyon.jpg",
+    image:PrometheusCaveAndCanyonTrail,
     tags: ["Cave", "Canyon", "Swimming", "Karst", "Family-friendly"],
   },
   {
@@ -1316,7 +1342,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (out and back trail)",
     cellPhoneReception: "Limited in valley areas",
-    imageUrl: "https://example.com/images/machakhela-river-trail.jpg",
+    image:MachakhelaNationalParkRiverTrail,
     tags: ["River", "Forest", "Waterfall", "UNESCO site", "Family-friendly"],
   },
   {
@@ -1394,7 +1420,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (loop trail)",
     cellPhoneReception: "Spotty, stronger at higher points",
-    imageUrl: "https://example.com/images/javakheti-lakes-circuit.jpg",
+    image: JavakhetiLakesCircuit,
     tags: ["Lakes", "Alpine", "Bird watching", "Volcanic", "High plateau"],
   },
   {
@@ -1478,7 +1504,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Ghebi Village",
     cellPhoneReception: "Very limited to none",
-    imageUrl: "https://example.com/images/racha-alpine-meadows.jpg",
+    image:RachaAlpineMeadowsTrek,
     tags: ["Alpine", "Remote", "Pastoral", "Backcountry", "High mountain"],
   },
   {
@@ -1551,7 +1577,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Tsikhisdziri Village",
     cellPhoneReception: "Excellent throughout",
-    imageUrl: "https://example.com/images/black-sea-coastal-path.jpg",
+    image: BlackSeaCoastalPath,
     tags: ["Coastal", "Swimming", "Beach", "Subtropical", "Village-to-village"],
   },
   {
@@ -1634,7 +1660,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Mutso Village",
     cellPhoneReception: "None",
-    imageUrl: "https://example.com/images/khevsureti-mountain-pass.jpg",
+    image: KhevsuretiMountainPassTrek,
     tags: ["High mountain", "Historical", "Cultural", "Remote", DifficultyLevel.Difficult]
     },
     {
@@ -1707,7 +1733,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (loop trail)",
     cellPhoneReception: "Good throughout",
-    imageUrl: "https://example.com/images/didgori-battlefield-path.jpg",
+    image: DidgoriBattlefieldHeritagePath,
     tags: [
       "Historical",
       "Educational",
@@ -1791,7 +1817,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (out and back trail)",
     cellPhoneReception: "Good near fortress, spotty in gorge",
-    imageUrl: "https://example.com/images/aragvi-river-gorge-trail.jpg",
+    image: AragviRiverGorgeTrail,
     tags: ["River", "Gorge", "Historical", "Waterfall", "Fortress"],
   },
   {
@@ -1877,7 +1903,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Roshka Village",
     cellPhoneReception: "Very limited to none",
-    imageUrl: "https://example.com/images/khevi-khevsureti-connect.jpg",
+    image: KheviKhevsuretiConnectRoute,
     tags: [
       "Multi-day",
       "High mountain",
@@ -1956,7 +1982,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (out and back trail)",
     cellPhoneReception: "Good throughout",
-    imageUrl: "https://example.com/images/tedzami-river-valley.jpg",
+    image:TedzamiRiverValleyPath,
     tags: ["River", "Monastery", "Family-friendly", "Swimming", "Birdwatching"],
   },
   {
@@ -2040,7 +2066,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Arkhoti Valley",
     cellPhoneReception: "None",
-    imageUrl: "https://example.com/images/pshav-khevsureti-traverse.jpg",
+    image: PshavKhevsuretiRangeTraverse,
     tags: ["Expedition", "Remote", "High mountain", "Cultural", "Multi-day"],
   },
   {
@@ -2122,7 +2148,7 @@ export const trails: HikingTrail[] = [
     },
     endPoint: "Same as starting point (loop trail)",
     cellPhoneReception: "Good near monuments, variable between",
-    imageUrl: "https://example.com/images/vardzia-khertvisi-loop.jpg",
+    image: VardziaCaveCityAndKhertvisiLoop,
     tags: ["Historical", "Cultural", "Cave city", "Fortress", "River valley"],
   },
 ];
