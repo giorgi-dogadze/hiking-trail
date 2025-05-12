@@ -107,7 +107,7 @@ export interface HikingTrail {
   startingPoint: StartingPoint;
   endPoint: string | StartingPoint;
   cellPhoneReception: string;
-  imageUrl: string;
+  image: string;
   tags: string[];
   permitRequired?: boolean;
   equipmentNeeded?: string[];

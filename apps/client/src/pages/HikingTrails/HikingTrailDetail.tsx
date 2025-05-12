@@ -1,44 +1,79 @@
 import React, { memo, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-
-// Mock data
-const mockTrailDetails = {
-    1: { id: 1, name: 'Mountain Ridge Trail', difficulty: 'Moderate', length: '8.5 miles', elevation: '1200 ft', description: 'A beautiful trail with stunning mountain views.' },
-    2: { id: 2, name: 'Lake View Path', difficulty: 'Easy', length: '3.2 miles', elevation: '400 ft', description: 'An easy walk around a scenic lake.' },
-    3: { id: 3, name: 'Valley Discovery Route', difficulty: 'Hard', length: '12 miles', elevation: '2800 ft', description: 'A challenging hike through diverse terrain.' },
-};
+import { trails } from './trails.data';
+import { HikingTrail } from './types';
+import { Footer, Header } from '@/components/core';
+import { ArrowLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import TrailDetailHeader from './components/TrailDetailHeader';
+import TrailDescription from './components/TrailDescription';
+import TrailHighlights from './components/TrailHighlights';
+import TrailHazards from './components/TrailHazards';
+import TrailInformation from './components/TrailInformation';
+import TrailSeasons from './components/TrailSeasons';
+import TrailFacilities from './components/TrailFacilities';
 
 const HikingTrailDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
-    const [trail, setTrail] = useState<any>(null);
+    const [trail, setTrail] = useState<HikingTrail | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate API call
-        setTimeout(() => {
-            if (id && mockTrailDetails[id as unknown as keyof typeof mockTrailDetails]) {
-                setTrail(mockTrailDetails[id as unknown as keyof typeof mockTrailDetails]);
-            }
-            setLoading(false);
-        }, 500);
+        // Find trail by ID
+        if (id) {
+            const foundTrail = trails.find(t => t.id === Number(id));
+            setTrail(foundTrail || null);
+        }
+        setLoading(false);
     }, [id]);
 
-    if (loading) return <div>Loading trail details...</div>;
-    if (!trail) return <div>Trail not found</div>;
+    if (loading) return (
+        <div className="min-h-screen flex items-center justify-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+        </div>
+    );
+
+    if (!trail) return (
+        <div className="min-h-screen flex items-center justify-center flex-col gap-4">
+            <h1 className="text-2xl font-bold">Trail not found</h1>
+            <Link to="/hiking-trails">
+                <Button>
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Back to Trails
+                </Button>
+            </Link>
+        </div>
+    );
 
     return (
-        <div className="hiking-trail-detail">
-            <h1>{trail.name}</h1>
-            <div className="trail-stats">
-                <p><strong>Difficulty:</strong> {trail.difficulty}</p>
-                <p><strong>Length:</strong> {trail.length}</p>
-                <p><strong>Elevation Gain:</strong> {trail.elevation}</p>
-            </div>
-            <div className="trail-description">
-                <h2>Description</h2>
-                <p>{trail.description}</p>
-            </div>
-            <Link to="/hiking-trails">Back to Trails</Link>
+        <div>
+            <Header />
+            <main className="container mx-auto py-8 px-4">
+                <TrailDetailHeader
+                    title={trail.title}
+                    region={trail.region}
+                    difficulty={trail.difficulty.level}
+                />
+
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div className="lg:col-span-2">
+                        <TrailDescription
+                            description={trail.description}
+                            image={trail.image}
+                            title={trail.title}
+                        />
+                        <TrailHighlights highlights={trail.highlights} />
+                        <TrailHazards hazards={trail.hazards} />
+                    </div>
+
+                    <div className="lg:col-span-1">
+                        <TrailInformation trail={trail} />
+                        <TrailSeasons seasons={trail.seasons} />
+                        <TrailFacilities facilities={trail.facilities} />
+                    </div>
+                </div>
+            </main>
+            <Footer />
         </div>
     );
 };
