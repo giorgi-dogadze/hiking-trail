@@ -41,9 +41,9 @@
     "title": "Best Hiking Routes",
     "viewRoute": "View Route",
     "difficulty": {
-      "easy": "Easy",
-      "moderate": "Moderate",
-      "hard": "Hard"
+      "Easy": "Easy",
+      "Moderate": "Moderate",
+      "Difficult": "Difficult"
     }
   },
   "testimonials": {
@@ -63,5 +63,43 @@
     "allRightsReserved": "All rights reserved.",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy"
-  }
+  },
+  "trail": {
+    "viewDetails": "View Details",
+    "length": "Length",
+    "hour": "hour",
+    "hours": "hours",
+    "notFound": "Trail not found",
+    "backToTrails": "Back to Trails",
+    "information": {
+      "title": "Trail Information",
+      "trailType": "Trail Type",
+      "length": "Length",
+      "estimatedTime": "Estimated Time",
+      "elevation": "Elevation",
+      "up": "Up",
+      "down": "Down",
+      "difficulty": "Difficulty"
+    },
+    "seasons": {
+      "title": "Seasons",
+      "spring": "Spring",
+      "summer": "Summer",
+      "autumn": "Autumn",
+      "winter": "Winter"
+    },
+    "facilities": {
+      "title": "Facilities",
+      "parking": "Parking",
+      "restrooms": "Restrooms",
+      "camping": "Camping",
+      "water": "Water Source"
+    }
+  },
+  "available":"Available",
+  "not_available":"Not available",
+  "description": "Description",
+  "highlights": "Highlights",
+  "hazards": "Hazards"
+
 }

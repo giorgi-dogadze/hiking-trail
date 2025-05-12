@@ -1,80 +1,46 @@
 import React from 'react';
-import { ChevronUpIcon, ChevronDownIcon, Clock } from 'lucide-react';
-import { DifficultyLevel, HikingTrail } from '../types';
+import { useTranslation } from 'react-i18next';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { HikingTrail } from '../types';
 
 interface TrailInformationProps {
     trail: HikingTrail;
 }
 
-export const TrailInformation: React.FC<TrailInformationProps> = ({ trail }) => {
-    const getDifficultyColor = (level: DifficultyLevel) => {
-        switch (level) {
-            case DifficultyLevel.Easy:
-                return 'bg-green-100 text-green-800';
-            case DifficultyLevel.Moderate:
-                return 'bg-yellow-100 text-yellow-800';
-            case DifficultyLevel.Difficult:
-                return 'bg-red-100 text-red-800';
-            default:
-                return 'bg-gray-100 text-gray-800';
-        }
-    };
+const TrailInformation: React.FC<TrailInformationProps> = ({ trail }) => {
+    const { t } = useTranslation();
 
     return (
-        <div className="bg-gray-50 rounded-xl p-6 mb-6">
-            <h3 className="text-xl font-bold mb-4">Trail Information</h3>
-            <div className="space-y-4">
+        <Card className="mb-6">
+            <CardHeader>
+                <h3 className="font-bold text-xl">{t('trail.information.title')}</h3>
+            </CardHeader>
+            <CardContent className="space-y-3">
                 <div>
-                    <p className="text-sm text-gray-500">Trail Type</p>
-                    <p className="font-medium">{trail.trailType}</p>
+                    <p className="text-sm font-medium text-gray-500">{t('trail.information.trailType')}</p>
+                    <p>{trail.trailType}</p>
                 </div>
                 <div>
-                    <p className="text-sm text-gray-500">Length</p>
-                    <p className="font-medium">{trail.length} {trail.lengthUnit}</p>
+                    <p className="text-sm font-medium text-gray-500">{t('trail.information.length')}</p>
+                    <p>{trail.length} {trail.lengthUnit}</p>
                 </div>
                 <div>
-                    <p className="text-sm text-gray-500">Elevation</p>
-                    <div className="flex items-center">
-                        <ChevronUpIcon className="w-5 h-5 mr-1 text-green-600" />
-                        <span className="font-medium">{trail.heightUp}{trail.elevationUnit}</span>
-                        <ChevronDownIcon className="w-5 h-5 ml-4 mr-1 text-red-600" />
-                        <span className="font-medium">{trail.heightDown}{trail.elevationUnit}</span>
-                    </div>
+                    <p className="text-sm font-medium text-gray-500">{t('trail.information.estimatedTime')}</p>
+                    <p>{trail.estimatedTime.minimum}-{trail.estimatedTime.maximum} {t(`trail.${trail.estimatedTime.timeUnit}`)}</p>
                 </div>
                 <div>
-                    <p className="text-sm text-gray-500">Estimated Time</p>
-                    <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        <span className="font-medium">
-                            {trail.estimatedTime.minimum}-{trail.estimatedTime.maximum} {trail.estimatedTime.timeUnit}
-                        </span>
-                    </div>
+                    <p className="text-sm font-medium text-gray-500">{t('trail.information.elevation')}</p>
+                    <p>
+                        {t('trail.information.up')}: {trail.heightUp}{trail.elevationUnit},
+                        {t('trail.information.down')}: {trail.heightDown}{trail.elevationUnit}
+                    </p>
                 </div>
                 <div>
-                    <p className="text-sm text-gray-500">Difficulty</p>
-                    <div className="flex items-center">
-                        <span
-                            className={`px-3 py-1 rounded-full text-sm ${getDifficultyColor(trail.difficulty.level)}`}
-                        >
-                            {trail.difficulty.level}
-                        </span>
-                        <span className="ml-2 text-sm text-gray-600">
-                            (Recommended for {trail.difficulty.recommendedExperience})
-                        </span>
-                    </div>
+                    <p className="text-sm font-medium text-gray-500">{t('trail.information.difficulty')}</p>
+                    <p> {t(`hikingRoutes.difficulty.${trail.difficulty.level}`)}</p>
                 </div>
-                <div>
-                    <p className="text-sm text-gray-500">Terrain</p>
-                    <div className="flex flex-wrap gap-1 mt-1">
-                        {trail.terrain.map((item, i) => (
-                            <span key={i} className="bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">
-                                {item}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </div>
+            </CardContent>
+        </Card>
     );
 };
 

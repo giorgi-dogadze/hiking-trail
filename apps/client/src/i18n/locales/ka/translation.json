@@ -41,9 +41,9 @@
     "title": "საუკეთესო საფეხმავლო მარშრუტები",
     "viewRoute": "მარშრუტის ნახვა",
     "difficulty": {
-      "easy": "მარტივი",
-      "moderate": "საშუალო",
-      "hard": "რთული"
+      "Easy": "მარტივი",
+      "Moderate": "საშუალო",
+      "Difficult": "რთული"
     }
   },
   "testimonials": {
@@ -63,5 +63,42 @@
     "allRightsReserved": "ყველა უფლება დაცულია.",
     "terms": "მომსახურების პირობები",
     "privacy": "კონფიდენციალურობის პოლიტიკა"
-  }
+  },
+  "trail": {
+    "viewDetails": "დეტალების ნახვა",
+    "length": "სიგრძე",
+    "hour": "საათი",
+    "hours": "საათი",
+    "notFound": "მარშრუტი ვერ მოიძებნა",
+    "backToTrails": "მარშრუტებზე დაბრუნება",
+    "information": {
+      "title": "მარშრუტის ინფორმაცია",
+      "trailType": "მარშრუტის ტიპი",
+      "length": "სიგრძე",
+      "estimatedTime": "სავარაუდო დრო",
+      "elevation": "სიმაღლე",
+      "up": "ზევით",
+      "down": "ქვევით",
+      "difficulty": "სირთულე"
+    },
+    "seasons": {
+      "title": "სეზონები",
+      "spring": "გაზაფხული",
+      "summer": "ზაფხული",
+      "autumn": "შემოდგომა",
+      "winter": "ზამთარი"
+    },
+    "facilities": {
+      "title": "საშუალებები",
+      "parking": "პარკინგი",
+      "restrooms": "საპირფარეშოები",
+      "camping": "კემპინგი",
+      "water": "წყლის წყარო"
+    }
+  },
+    "available":"ხელმისაწვდომია",
+  "not_available":"არაა ხელმისაწვდომი",
+  "description": "აღწერილობა",
+    "highlights": "მნიშვნელოვანი მომენტები",
+  "hazards": "საფრთხეები"
 }

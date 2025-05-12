@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface TrailDescriptionProps {
     description: string;
@@ -7,6 +8,8 @@ interface TrailDescriptionProps {
 }
 
 const TrailDescription: React.FC<TrailDescriptionProps> = ({ description, image, title }) => {
+    const { t } = useTranslation();
+
     return (
         <>
             <div className="mb-8 rounded-xl overflow-hidden h-[400px]">
@@ -21,7 +24,7 @@ const TrailDescription: React.FC<TrailDescriptionProps> = ({ description, image,
             </div>
 
             <div className="mb-8">
-                <h2 className="text-2xl font-bold mb-4">Description</h2>
+                <h2 className="text-2xl font-bold mb-4">{t(`description`)}</h2>
                 <p className="text-gray-700 leading-relaxed whitespace-pre-line">
                     {description}
                 </p>

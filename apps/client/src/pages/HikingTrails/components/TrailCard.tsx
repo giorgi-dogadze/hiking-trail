@@ -12,6 +12,7 @@ import {
     HikingTrail,
     TrailType
 } from '../types';
+import { useTranslation } from 'react-i18next';
 
 interface TrailCardProps {
     trail: HikingTrail;
@@ -20,6 +21,8 @@ interface TrailCardProps {
 }
 
 export const TrailCard: React.FC<TrailCardProps> = ({ trail, viewMode, onClick }) => {
+    const { t } = useTranslation();
+
     const handleClick = () => {
         onClick(trail.id);
     };
@@ -107,7 +110,7 @@ export const TrailCard: React.FC<TrailCardProps> = ({ trail, viewMode, onClick }
                         <h3 className="font-bold text-lg line-clamp-1">{trail.title}</h3>
                         <div className={`px-3 py-1 rounded-full text-xs ${getDifficultyColor(trail.difficulty.level)}`}>
                             <div className="flex items-center">
-                                {trail.difficulty.level}
+                                {t(`hikingRoutes.difficulty.${trail.difficulty.level}`)}
                             </div>
                         </div>
                     </div>
@@ -125,14 +128,14 @@ export const TrailCard: React.FC<TrailCardProps> = ({ trail, viewMode, onClick }
 
                     <div className="grid grid-cols-2 gap-2 text-sm">
                         <div className="flex items-center">
-                            <span className="font-medium mr-1">Length:</span>
+                            <span className="font-medium mr-1">{t('trail.length')}:</span>
                             {trail.length} {trail.lengthUnit}
                         </div>
 
                         <div className="flex items-center">
                             <Clock className="w-4 h-4 mr-1" />
                             <span>
-                                {trail.estimatedTime.minimum}-{trail.estimatedTime.maximum} {trail.estimatedTime.timeUnit}
+                                {trail.estimatedTime.minimum}-{trail.estimatedTime.maximum} {t(`trail.${trail.estimatedTime.timeUnit}`)}
                             </span>
                         </div>
 
@@ -151,7 +154,7 @@ export const TrailCard: React.FC<TrailCardProps> = ({ trail, viewMode, onClick }
 
                 <CardFooter className="pt-2">
                     <Button variant="outline" className="w-full text-sm">
-                        View Details
+                        {t('trail.viewDetails')}
                     </Button>
                 </CardFooter>
             </div>

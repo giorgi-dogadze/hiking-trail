@@ -12,11 +12,13 @@ import TrailHazards from './components/TrailHazards';
 import TrailInformation from './components/TrailInformation';
 import TrailSeasons from './components/TrailSeasons';
 import TrailFacilities from './components/TrailFacilities';
+import { useTranslation } from 'react-i18next';
 
 const HikingTrailDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [trail, setTrail] = useState<HikingTrail | null>(null);
     const [loading, setLoading] = useState(true);
+    const { t } = useTranslation();
 
     useEffect(() => {
         // Find trail by ID
@@ -35,11 +37,11 @@ const HikingTrailDetail: React.FC = () => {
 
     if (!trail) return (
         <div className="min-h-screen flex items-center justify-center flex-col gap-4">
-            <h1 className="text-2xl font-bold">Trail not found</h1>
+            <h1 className="text-2xl font-bold">{t('trail.notFound')}</h1>
             <Link to="/hiking-trails">
                 <Button>
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Trails
+                    {t('trail.backToTrails')}
                 </Button>
             </Link>
         </div>

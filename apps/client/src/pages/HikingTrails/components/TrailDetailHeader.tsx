@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, MapPin } from 'lucide-react';
 import { DifficultyLevel } from '../types';
+import { useTranslation } from 'react-i18next';
 
 interface TrailDetailHeaderProps {
     title: string;
@@ -10,6 +11,8 @@ interface TrailDetailHeaderProps {
 }
 
 export const TrailDetailHeader: React.FC<TrailDetailHeaderProps> = ({ title, region, difficulty }) => {
+    const { t } = useTranslation();
+
     const getDifficultyColor = (level: DifficultyLevel) => {
         switch (level) {
             case DifficultyLevel.Easy:
@@ -27,7 +30,7 @@ export const TrailDetailHeader: React.FC<TrailDetailHeaderProps> = ({ title, reg
         <div className="mb-6">
             <Link to="/hiking-trails" className="flex items-center text-primary hover:underline mb-4">
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Trails
+                {t('trail.backToTrails')}
             </Link>
             <h1 className="text-3xl font-bold mb-2">{title}</h1>
             <div className="flex items-center gap-4 flex-wrap">
@@ -36,7 +39,7 @@ export const TrailDetailHeader: React.FC<TrailDetailHeaderProps> = ({ title, reg
                     <span className="text-gray-600">{region}</span>
                 </div>
                 <div className={`px-3 py-1 rounded-full text-sm ${getDifficultyColor(difficulty)}`}>
-                    {difficulty}
+                    {t(`hikingRoutes.difficulty.${difficulty}`)}
                 </div>
             </div>
         </div>

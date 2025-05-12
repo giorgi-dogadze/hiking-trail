@@ -1,20 +1,23 @@
 import React from 'react';
 import { Droplets } from 'lucide-react';
 import { HikingTrail } from '../types';
+import { useTranslation } from 'react-i18next';
 
 interface TrailFacilitiesProps {
     facilities: HikingTrail['facilities'];
 }
 
 export const TrailFacilities: React.FC<TrailFacilitiesProps> = ({ facilities }) => {
+    const { t } = useTranslation();
+
     return (
         <div className="bg-gray-50 rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-4">Facilities</h3>
+            <h3 className="text-xl font-bold mb-4">{t('trail.facilities.title')}</h3>
             <div className="space-y-3">
                 <div className="flex items-center">
                     <Droplets className="w-4 h-4 mr-2" />
                     <div>
-                        <p className="text-sm font-medium">Water</p>
+                        <p className="text-sm font-medium">{t('trail.facilities.water')}</p>
                         <p className="text-sm text-gray-600">{facilities.waterAvailability}</p>
                     </div>
                 </div>
@@ -25,10 +28,10 @@ export const TrailFacilities: React.FC<TrailFacilitiesProps> = ({ facilities }) 
                         </svg>
                     </div>
                     <div>
-                        <p className="text-sm font-medium">Restrooms</p>
+                        <p className="text-sm font-medium">{t('trail.facilities.restrooms')}</p>
                         <p className="text-sm text-gray-600">
                             {typeof facilities.restroomAccess === 'boolean'
-                                ? facilities.restroomAccess ? 'Available' : 'Not available'
+                                ? facilities.restroomAccess ? t(`available`) : t(`not_available`)
                                 : facilities.restroomAccess}
                         </p>
                     </div>
@@ -40,10 +43,10 @@ export const TrailFacilities: React.FC<TrailFacilitiesProps> = ({ facilities }) 
                         </svg>
                     </div>
                     <div>
-                        <p className="text-sm font-medium">Parking</p>
+                        <p className="text-sm font-medium">{t(`trail.facilities.parking`)}</p>
                         <p className="text-sm text-gray-600">
                             {typeof facilities.parkingAvailable === 'boolean'
-                                ? facilities.parkingAvailable ? 'Available' : 'Not available'
+                                ? facilities.parkingAvailable ? t(`available`) : t(`not_available`)
                                 : facilities.parkingAvailable}
                         </p>
                     </div>
