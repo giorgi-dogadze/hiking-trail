@@ -1,4 +1,19 @@
 import JackBackpack from "../../assets/Equipments/Jack Wolfskin Wilderness 65L ზურგჩანთა.jpg";
+import EcoKitchenSet from "../../assets/Equipments/ეკო სამზარეულოს ნაკრები.jpg";
+import NorthFaceJacket from "../../assets/Equipments/The North Face Mountain Light FUTURELIGHT ქურთუკი.png";
+import TiflisGPS from "../../assets/Equipments/ტიფლისი მთის GPS ნავიგატორი.jpg";
+import SleepingBag from "../../assets/Equipments/ექსტრემალური საძილე ტომარა.jpg";
+import TrekkingPoles from "../../assets/Equipments/ქართული ტრეკინგის ჯოხები.jpg";
+import CompactStove from "../../assets/Equipments/ულტრა კომპაქტური ქურა.jpg";
+import KhevsuriTarp from "../../assets/Equipments/ხევსურული ტილო.webp";
+import SalomonShoes from "../../assets/Equipments/Salomon Speedcross 6 GTX სალაშქრო ფეხსაცმელი.jpg";
+import AlpineTent from "../../assets/Equipments/მესტია ალპური კარავი.jpg";
+import MSRReactor from "../../assets/Equipments/MSR Reactor 1.7L საველე ქვაბი.jpg";
+import Headlamp from "../../assets/Equipments/სანათი ფანარი.webp";
+import MultiTool from "../../assets/Equipments/მულტიფუნქციური ხელსაწყო.jpg";
+import AlpineHelmet from "../../assets/Equipments/ალპური ჩაფხუტი.jpeg";
+import FieldFoodKit from "../../assets/Equipments/საველე კვების ნაკრები.jpg";
+import AvalancheBag from "../../assets/Equipments/ანტიასფიქსიური ზურგჩანთა.jpg";
 
 export interface Equipment {
   id: string;
@@ -235,7 +250,7 @@ export const equipments:Equipment[] = [
         "100% მდგრადი, ბიოდეგრადირებადი მასალები. კომპანია რგავს 1 ხეს ყოველი გაყიდული ნაკრებისთვის.",
     },
     lastUpdated: new Date("2025-04-30"),
-    image: 'proper image',
+    image: EcoKitchenSet,
   },
   {
     id: "equip7",
@@ -327,7 +342,7 @@ export const equipments:Equipment[] = [
         "დამზადებულია გადამუშავებული მასალებისგან და შეესაბამება Bluesign-ის სტანდარტებს.",
     },
     lastUpdated: new Date("2025-04-25"),
-    image: 'proper image',
+    image: NorthFaceJacket,
   },
   {
     id: "equip8",
@@ -416,7 +431,7 @@ export const equipments:Equipment[] = [
         "გადამუშავებადი კომპონენტები. მწარმოებელს აქვს ელექტრონული ნარჩენების გადამუშავების პროგრამა.",
     },
     lastUpdated: new Date("2025-05-07"),
-    image: 'proper image',
+    image: TiflisGPS,
   },
   {
     id: "equip9",
@@ -596,7 +611,7 @@ export const equipments:Equipment[] = [
         "ეთიკურად მოპოვებული RDS-სერტიფიცირებული ბუმბული. ბუმბულის 5% იხარჯება ფრინველთა კონსერვაციის პროექტებზე.",
     },
     lastUpdated: new Date("2025-04-20"),
-    image: 'proper image',
+    image: SleepingBag,
   },
   {
     id: "equip11",
@@ -687,7 +702,7 @@ export const equipments:Equipment[] = [
         "ყველა მასალა მდგრადი წყაროებიდან. კომპანია მონაწილეობს ტყის აღდგენის პროგრამაში.",
     },
     lastUpdated: new Date("2025-04-12"),
-    image: 'proper image',
+    image: TrekkingPoles,
   },
   {
     id: "equip12",
@@ -777,7 +792,7 @@ export const equipments:Equipment[] = [
         "100% გადამუშავებადი მასალები. მწარმოებელი ახორციელებს CO2 კომპენსაციის პროგრამას.",
     },
     lastUpdated: new Date("2025-05-02"),
-    image: 'proper image',
+    image: CompactStove,
   },
   {
     id: "equip13",
@@ -865,7 +880,7 @@ export const equipments:Equipment[] = [
         "100% ბუნებრივი მასალები და საღებავები. ხელით დამზადებული. მხარს უჭერს მთის თემების ტრადიციულ რეწვას.",
     },
     lastUpdated: new Date("2025-05-04"),
-    image: 'proper image',
+    image: KhevsuriTarp,
   },
   {
     id: "equip14",
@@ -950,7 +965,7 @@ export const equipments:Equipment[] = [
         "Salomon-ის სტანდარტი წარმოებაში, მუშაობს მდგრადი ალტერნატივების განვითარებაზე.",
     },
     lastUpdated: new Date("2025-05-01"),
-    image: 'proper image',
+    image: SalomonShoes,
   },
   {
     id: "equip15",
@@ -1047,7 +1062,7 @@ export const equipments:Equipment[] = [
         "PFC-თავისუფალი წყალგაუმტარი დამუშავება. მწარმოებელი მონაწილეობს მთის ეკოსისტემების დაცვის პროგრამაში.",
     },
     lastUpdated: new Date("2025-04-25"),
-    image: 'proper image',
+    image: AlpineTent,
   },
   {
     id: "equip16",
@@ -1129,7 +1144,7 @@ export const equipments:Equipment[] = [
         "PFC-თავისუფალი წყალგაუმტარი დამუშავება. მწარმოებელი მონაწილეობს მთის ეკოსისტემების დაცვის პროგრამაში.",
     },
     lastUpdated: new Date("2025-04-25"),
-    image: 'proper image',
+    image: MSRReactor,
   },
   {
     id: "equip17",
@@ -1222,7 +1237,7 @@ export const equipments:Equipment[] = [
         "ხელახლა დასატენი ბატარეა. მწარმოებელი მონაწილეობს ელექტრონული ნარჩენების გადამუშავების პროგრამაში.",
     },
     lastUpdated: new Date("2025-05-10"),
-    image: 'proper image',
+    image: Headlamp,
   },
   {
     id: "equip18",
@@ -1328,7 +1343,7 @@ export const equipments:Equipment[] = [
         "ხელნაკეთი გამძლე პროდუქტი, შექმნილი სამუდამო გამოყენებისთვის. მწარმოებელი იძლევა მთელი სიცოცხლის მანძილზე შეკეთების გარანტიას.",
     },
     lastUpdated: new Date("2025-04-22"),
-    image: 'proper image',
+    image: MultiTool,
   },
   {
     id: "equip19",
@@ -1422,7 +1437,7 @@ export const equipments:Equipment[] = [
         "გადამუშავებადი მასალები. მწარმოებელი მონაწილეობს მთის გარემოს დასუფთავების პროგრამებში.",
     },
     lastUpdated: new Date("2025-05-15"),
-    image: 'proper image',
+    image: AlpineHelmet,
   },
   {
     id: "equip20",
@@ -1520,7 +1535,7 @@ export const equipments:Equipment[] = [
         "მდგრადი წარმოება. შეფუთვა 100% გადამუშავებადია. ინგრედიენტები მოპოვებულია ეთიკური და მდგრადი წყაროებიდან.",
     },
     lastUpdated: new Date("2025-05-08"),
-    image: 'proper image',
+    image: FieldFoodKit,
   },
   {
     id: "equip21",
@@ -1612,6 +1627,6 @@ export const equipments:Equipment[] = [
         "გადამუშავებადი ელექტრონული კომპონენტები. მწარმოებელი პროცენტს გადარიცხავს სამთო მაშველთა ფონდში.",
     },
     lastUpdated: new Date("2025-05-20"),
-    image: 'proper image',
+    image: AvalancheBag,
   },
 ];

@@ -113,9 +113,106 @@
     "hours": "hours",
     "noResults": "No trails match your filters. Try adjusting your search criteria."
   },
-  "available":"Available",
-  "not_available":"Not available",
+  "available": "Available",
+  "not_available": "Not available",
   "description": "Description",
   "highlights": "Highlights",
-  "hazards": "Hazards"
+  "hazards": "Hazards",
+  "equipment": {
+    "title": "Hiking Equipment",
+    "notFound": "Equipment not found",
+    "backToEquipment": "Back to Equipment",
+    "inStock": "In Stock",
+    "lowStock": "Low Stock",
+    "outOfStock": "Out of Stock",
+    "preOrder": "Pre-Order",
+    "addToWishlist": "Add to Wishlist",
+    "buyNow": "Buy Now",
+    "reviews": "reviews",
+    "features": "Key Features",
+    "weatherResistance": "Weather Resistance",
+    "recommendedFor": "Recommended For",
+    "maintenance": "Care & Maintenance",
+    "ecoInfo": "Environmental Information",
+    "tags": "Tags",
+    "lastUpdated": "Last Updated",
+    "noResults": "No equipment match your filters. Try adjusting your search criteria.",
+    "filters": {
+      "searchPlaceholder": "Search equipment by name, tags or description...",
+      "filtersButton": "Filters",
+      "filterOptions": "Filter Options",
+      "category": "Category",
+      "allCategories": "All Categories",
+      "brand": "Brand",
+      "allBrands": "All Brands",
+      "seasonRating": "Season",
+      "allSeasons": "All Seasons",
+      "priceRange": "Price Range",
+      "allPrices": "All Prices",
+      "under100": "Under 100 GEL",
+      "between100and200": "100 - 200 GEL",
+      "between200and500": "200 - 500 GEL",
+      "over500": "Over 500 GEL",
+      "availability": "Availability",
+      "allAvailability": "All Availability",
+      "resetFilters": "Reset Filters"
+    },
+    "specifications": {
+      "title": "Specifications",
+      "weight": "Weight",
+      "dimensions": "Dimensions",
+      "material": "Material",
+      "color": "Color",
+      "season": "Recommended Seasons",
+      "origin": "Origin",
+      "warranty": "Warranty",
+      "months": "months"
+    },
+    "categories": {
+      "cat1": "Shelter",
+      "cat2": "Sleeping Gear",
+      "cat3": "Footwear",
+      "cat4": "Clothing",
+      "cat5": "Cooking",
+      "cat6": "Navigation",
+      "cat7": "Backpacks",
+      "cat8": "Safety & First Aid"
+    },
+    "seasons": {
+      "ALL_SEASON": "All Seasons",
+      "WINTER": "Winter",
+      "SUMMER": "Summer",
+      "SPRING": "Spring",
+      "AUTUMN": "Autumn"
+    },
+    "weatherProperties": {
+      "waterproof": "Waterproof",
+      "windproof": "Windproof",
+      "waterResistanceRating": "Water Resistance",
+      "uvProtection": "UV Protection",
+      "windResistanceRating": "Wind Resistance",
+      "snowResistant": "Snow Resistant",
+      "mudproof": "Mud Proof",
+      "shockproof": "Shock Proof",
+      "coldResistant": "Cold Resistant",
+      "rustproof": "Rust Proof",
+      "uv_resistance": "UV Resistant",
+      "snowproof": "Snow Proof"
+    },
+    "difficulty": {
+      "BEGINNER": "Beginner",
+      "INTERMEDIATE": "Intermediate",
+      "EXPERT": "Expert",
+      "ALL_LEVELS": "All Levels"
+    },
+    "recommendedFor": {
+      "difficulty": "Experience Level",
+      "terrain": "Suitable Terrain",
+      "activities": "Activities"
+    },
+    "ecoProps": {
+      "sustainable": "Sustainable",
+      "recyclable": "Recyclable"
+    }
+  }
 }

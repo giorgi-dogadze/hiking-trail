@@ -96,6 +96,103 @@
       "water": "წყლის წყარო"
     }
   },
+  "equipment": {
+    "title": "სალაშქრო აღჭურვილობა",
+    "notFound": "აღჭურვილობა ვერ მოიძებნა",
+    "backToEquipment": "აღჭურვილობაზე დაბრუნება",
+    "inStock": "საწყობშია",
+    "lowStock": "მცირე მარაგშია",
+    "outOfStock": "არ არის მარაგში",
+    "preOrder": "წინასწარი შეკვეთა",
+    "addToWishlist": "სურვილების სიაში დამატება",
+    "buyNow": "ახლავე შეიძინე",
+    "reviews": "შეფასება",
+    "features": "ძირითადი მახასიათებლები",
+    "weatherResistance": "ამინდის გამძლეობა",
+    "recommendedFor": "რეკომენდებულია",
+    "maintenance": "მოვლა და შენახვა",
+    "ecoInfo": "ეკოლოგიური ინფორმაცია",
+    "tags": "ტეგები",
+    "lastUpdated": "ბოლო განახლება",
+    "noResults": "თქვენი ფილტრებით აღჭურვილობა ვერ მოიძებნა. სცადეთ ძიების კრიტერიუმების შეცვლა.",
+    "filters": {
+      "searchPlaceholder": "მოძებნეთ აღჭურვილობა სახელით, ტეგებით ან აღწერით...",
+      "filtersButton": "ფილტრები",
+      "filterOptions": "ფილტრის პარამეტრები",
+      "category": "კატეგორია",
+      "allCategories": "ყველა კატეგორია",
+      "brand": "ბრენდი",
+      "allBrands": "ყველა ბრენდი",
+      "seasonRating": "სეზონი",
+      "allSeasons": "ყველა სეზონი",
+      "priceRange": "ფასის დიაპაზონი",
+      "allPrices": "ყველა ფასი",
+      "under100": "100 ლარამდე",
+      "between100and200": "100 - 200 ლარი",
+      "between200and500": "200 - 500 ლარი",
+      "over500": "500 ლარზე მეტი",
+      "availability": "ხელმისაწვდომობა",
+      "allAvailability": "ყველა ხელმისაწვდომობა",
+      "resetFilters": "ფილტრების გასუფთავება"
+    },
+    "specifications": {
+      "title": "სპეციფიკაციები",
+      "weight": "წონა",
+      "dimensions": "ზომები",
+      "material": "მასალა",
+      "color": "ფერი",
+      "season": "რეკომენდებული სეზონები",
+      "origin": "წარმოშობა",
+      "warranty": "გარანტია",
+      "months": "თვე"
+    },
+    "categories": {
+      "cat1": "თავშესაფარი",
+      "cat2": "საძილე აღჭურვილობა",
+      "cat3": "ფეხსაცმელი",
+      "cat4": "ტანსაცმელი",
+      "cat5": "სამზარეულო",
+      "cat6": "ნავიგაცია",
+      "cat7": "ზურგჩანთები",
+      "cat8": "უსაფრთხოება და პირველადი დახმარება"
+    },
+    "seasons": {
+      "ALL_SEASON": "ყველა სეზონი",
+      "WINTER": "ზამთარი",
+      "SUMMER": "ზაფხული",
+      "SPRING": "გაზაფხული",
+      "AUTUMN": "შემოდგომა"
+    },
+    "weatherProperties": {
+      "waterproof": "წყალგაუმტარი",
+      "windproof": "ქარგაუმტარი",
+      "waterResistanceRating": "წყლის გამძლეობა",
+      "uvProtection": "UV დაცვა",
+      "windResistanceRating": "ქარის გამძლეობა",
+      "snowResistant": "თოვლისგან დაცვა",
+      "mudproof": "ტალახისგან დაცვა",
+      "shockproof": "დარტყმაგამძლე",
+      "coldResistant": "სიცივისგან დაცვა",
+      "rustproof": "ჟანგისგან დაცვა",
+      "uv_resistance": "UV გამძლე",
+      "snowproof": "თოვლგაუმტარი"
+    },
+    "difficulty": {
+      "BEGINNER": "დამწყები",
+      "INTERMEDIATE": "საშუალო",
+      "EXPERT": "ექსპერტი",
+      "ALL_LEVELS": "ყველა დონე"
+    },
+    "recommendedFor": {
+      "difficulty": "გამოცდილების დონე",
+      "terrain": "შესაფერისი რელიეფი",
+      "activities": "აქტივობები"
+    },
+    "ecoProps": {
+      "sustainable": "მდგრადი",
+      "recyclable": "გადამუშავებადი"
+    }
+  },
   "available": "ხელმისაწვდომია",
   "not_available": "არაა ხელმისაწვდომი",
   "description": "აღწერილობა",
