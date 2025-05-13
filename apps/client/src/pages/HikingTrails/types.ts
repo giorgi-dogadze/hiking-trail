@@ -78,11 +78,27 @@ interface CrowdLevel {
   peakSeason: string;
 }
 
+export enum Region {
+  Tbilisi = "Tbilisi",
+  Adjara = "Adjara",
+  Kakheti = "Kakheti",
+  Tusheti = "Tusheti",
+  Kazbegi = "Kazbegi",
+  Svaneti = "Svaneti",
+  Imereti = "Imereti",
+  Samegrelo_Zemo_Svaneti = "Samegrelo-Zemo Svaneti",
+  Shida_Kartli = "Shida Kartli",
+  Kvemo_Kartli = "Kvemo Kartli",
+  Samtskhe_Javakheti = "Samtskhe-Javakheti",
+  Racha_Lechkhumi = "Racha-Lechkhumi",
+  Mtskheta_Mtianeti = "Mtskheta-Mtianeti",
+}
+
 export interface HikingTrail {
   id: number;
   title: string;
   description: string;
-  region: string;
+  region: Region;
   difficulty: Difficulty;
   length: number;
   lengthUnit: LengthUnit;

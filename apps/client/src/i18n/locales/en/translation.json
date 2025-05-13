@@ -96,10 +96,26 @@
       "water": "Water Source"
     }
   },
+  "filters": {
+    "searchPlaceholder": "Search trails by title or tags...",
+    "filtersButton": "Filters",
+    "filterOptions": "Filter Options",
+    "difficulty": "Difficulty",
+    "allDifficulties": "All Difficulties",
+    "distance": "Distance",
+    "allDistances": "All Distances",
+    "duration": "Duration",
+    "allDurations": "All Durations",
+    "region": "Region",
+    "allRegions": "All Regions",
+    "resetFilters": "Reset Filters",
+    "km": "km",
+    "hours": "hours",
+    "noResults": "No trails match your filters. Try adjusting your search criteria."
+  },
   "available":"Available",
   "not_available":"Not available",
   "description": "Description",
   "highlights": "Highlights",
   "hazards": "Hazards"
-
 }

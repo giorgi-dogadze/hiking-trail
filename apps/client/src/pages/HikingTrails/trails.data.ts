@@ -4,6 +4,7 @@ import {
   HikingTrail,
   LengthUnit,
   RecommendedExperience,
+  Region,
   TimeUnit,
   TrailType,
 } from "./types";
@@ -40,7 +41,7 @@ export const trails: HikingTrail[] = [
     title: "Tbilisi Botanical Garden Trail",
     description:
       "This picturesque trail winds through the historic Tbilisi Botanical Garden, offering a perfect blend of natural beauty and historical significance. Founded in the 19th century, the garden houses over 4,500 plant species. The trail takes you past cascading waterfalls, across ornate bridges, and through diverse botanical collections. It's particularly magical during spring when the cherry blossoms are in full bloom or in autumn when the leaves change color. Along the way, you'll find several viewing platforms offering panoramic views of Old Tbilisi.",
-    region: "Tbilisi",
+    region: Region.Tbilisi,
     difficulty: {
       level: DifficultyLevel.Easy,
       technicalDifficulty: 1,
@@ -116,7 +117,7 @@ export const trails: HikingTrail[] = [
     title: "Kazbegi Glacier Trail",
     description:
       "One of Georgia's most iconic hikes, this trail leads to the stunning glacier near Mount Kazbek. Starting from Gergeti Trinity Church, the path ascends through alpine meadows filled with wildflowers in summer. As you gain elevation, the landscape transforms into a rugged mountainous terrain. The trail offers breathtaking views of the Caucasus range and the Terek River valley below. The final approach to the glacier requires some basic scrambling skills, but the sight of the ancient ice formation against the majestic Mount Kazbek makes every step worthwhile. Weather can change rapidly, so proper preparation is essential.",
-    region: "Mtskheta-Mtianeti",
+    region: Region.Mtskheta_Mtianeti,
     difficulty: {
       level: DifficultyLevel.Difficult,
       technicalDifficulty: 3,
@@ -212,7 +213,7 @@ export const trails: HikingTrail[] = [
     title: "Borjomi-Kharagauli National Park Loop",
     description:
       "This extensive trail network in one of Georgia's largest national parks offers multiple day hiking options. The main loop takes you through virgin forests, alpine meadows, and subalpine zones. The biodiversity here is remarkable, with opportunities to spot deer, bears, and golden eagles. Numerous springs with mineral water (for which Borjomi is famous) can be found along the way. The trail includes several well-maintained shelters for overnight stays. The changing ecosystems as you move through different elevations make this a fascinating journey for nature enthusiasts and wildlife photographers.",
-    region: "Samtskhe-Javakheti",
+    region: Region.Samtskhe_Javakheti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -306,7 +307,7 @@ export const trails: HikingTrail[] = [
     title: "Batumi Green Cape Botanical Garden Path",
     description:
       "Located along the Black Sea coast, this trail meanders through the famous Batumi Botanical Garden. With nine distinct geographic sections representing different parts of the world, the trail offers a unique global botanical journey. The path follows the coastline at times, providing spectacular views of the Black Sea. The combination of subtropical climate and diverse plant collections creates a lush experience unlike any other in Georgia. Magnolias, bamboo groves, eucalyptus trees, and Japanese gardens are just some of the highlights.",
-    region: "Adjara",
+    region: Region.Adjara,
     difficulty: {
       level: DifficultyLevel.Easy,
       technicalDifficulty: 1,
@@ -381,7 +382,7 @@ export const trails: HikingTrail[] = [
     title: "Svaneti Mestia to Ushguli Trek",
     description:
       "This legendary multi-day trek connects two of Svaneti's most remarkable settlements. The trail passes through remote villages with medieval defensive towers, across high mountain passes, and alongside glaciers. You'll traverse alpine meadows filled with wildflowers and cross pristine streams. The backdrop of snow-capped peaks, including Mt. Shkhara (Georgia's highest peak), creates an unforgettable landscape. Traditional Svan culture is visible throughout the journey, with opportunities to visit ancient churches and sample local cuisine.",
-    region: "Samegrelo-Zemo Svaneti",
+    region: Region.Samegrelo_Zemo_Svaneti,
     difficulty: {
       level: DifficultyLevel.Difficult,
       technicalDifficulty: 3,
@@ -479,7 +480,7 @@ export const trails: HikingTrail[] = [
     title: "Vashlovani National Park Safari Route",
     description:
       "This unique trail traverses the semi-desert landscape of Vashlovani, often called 'Georgia's Little Africa.' The path winds through pistachio woodlands, steep badlands, and arid plains that contrast dramatically with Georgia's more famous alpine regions. The biodiversity here is incredible, with opportunities to spot rare species like the Caucasian leopard, wolves, and various birds of prey. The trail includes visits to natural landmarks like the Eagle Canyon and Datvis Khvreli (Bear's Hole).",
-    region: "Kakheti",
+    region: Region.Kakheti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -567,7 +568,7 @@ export const trails: HikingTrail[] = [
     title: "Martvili Canyon Circuit",
     description:
       "This enchanting trail loops around and through the limestone Martvili Canyon, famous for its emerald waters and vertical walls. The path includes wooden walkways built along the canyon walls, offering intimate views of the rushing Abasha River below. Multiple waterfalls create a soothing soundtrack as you hike. The trail includes access points to view ancient dinosaur footprints preserved in the limestone.",
-    region: "Samegrelo-Zemo Svaneti",
+    region: Region.Samegrelo_Zemo_Svaneti,
     difficulty: {
       level: DifficultyLevel.Easy,
       technicalDifficulty: 1,
@@ -643,7 +644,7 @@ export const trails: HikingTrail[] = [
     title: "Lagodekhi Waterfall Trek",
     description:
       "This trail in Lagodekhi Protected Areas leads to one of Georgia's most impressive waterfalls. The path follows the Shromis Khevi gorge, crossing the river several times on wooden bridges. Ancient beech and hornbeam forests provide shade along much of the route. The diversity of fungi and moss species makes this a particularly interesting hike for naturalists. The final approach requires navigating some rocky terrain before reaching the 50-meter-high waterfall that thunders into a clear pool below.",
-    region: "Kakheti",
+    region: Region.Kakheti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -718,7 +719,7 @@ export const trails: HikingTrail[] = [
     title: "Tusheti Omalo to Dartlo Trek",
     description:
       "This remarkable trek connects two of Tusheti's most iconic villages, Omalo and Dartlo. The trail follows ancient shepherd paths through alpine meadows, dense forests, and dramatic mountain passes. As you hike, you'll witness the unique Tushetian architecture with distinctive slate-roofed defensive towers dotting the landscape. The trail offers breathtaking views of the Greater Caucasus range and passes through several smaller settlements where time seems to stand still. The cultural significance of this route is immense, as it has served as a lifeline between isolated mountain communities for centuries.",
-    region: "Tusheti",
+    region: Region.Tusheti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -797,7 +798,7 @@ export const trails: HikingTrail[] = [
     title: "Gergeti Trinity Church Trail",
     description:
       "This iconic Georgian trail leads to the 14th-century Gergeti Trinity Church, perched dramatically at 2,170m against the backdrop of Mount Kazbek. Starting from Stepantsminda (Kazbegi) village, the path climbs steeply through pine forests before opening to spectacular mountain vistas. The church itself is one of Georgia's most recognizable landmarks, and reaching it on foot is a spiritual journey for many. The surrounding area offers panoramic views of the Caucasus range and the Terek River valley below. Though challenging due to elevation gain, the cultural and natural rewards make this hike unforgettable.",
-    region: "Kazbegi",
+    region: Region.Kazbegi,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -869,7 +870,7 @@ export const trails: HikingTrail[] = [
     title: "Algeti National Park Forest Circuit",
     description:
       "This serene forest trail weaves through the diverse ecosystems of Algeti National Park, showcasing some of Georgia's richest biodiversity. The path traverses ancient pine and beech forests, crossing gentle streams and opening to flower-filled meadows. The park is home to numerous endemic plant species and wildlife including deer, lynx, and various bird species. The circuit offers a perfect balance of shade and sunshine, making it ideal even on warmer days. Several viewpoints along the route provide glimpses of the surrounding mountains and valleys, while interpretive signs explain the unique ecology of this protected area.",
-    region: "Kvemo Kartli",
+    region: Region.Kvemo_Kartli,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 1,
@@ -948,7 +949,7 @@ export const trails: HikingTrail[] = [
     title: "Truso Valley Expedition",
     description:
       "The Truso Valley trail leads into one of Georgia's hidden gems, a remote valley nestled near the Russian border. This trail follows the vibrant turquoise waters of the Terek River through a landscape dotted with mineral springs, travertine formations, and abandoned villages. The valley features remarkable geological phenomena including bubbling volcanic waters that create colorful mineral deposits. The route passes through several deserted settlements that tell the story of the region's complex history. The relative isolation means hikers often have this spectacular landscape almost entirely to themselves, creating a profound wilderness experience despite the moderate difficulty of the terrain.",
-    region: "Kazbegi",
+    region: Region.Kazbegi,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -1032,7 +1033,7 @@ export const trails: HikingTrail[] = [
     title: "Chalaadi Glacier Route",
     description:
       "This trail offers a unique opportunity to witness one of the most accessible glaciers in Europe. Starting near Mestia, the path winds through a magical mixed forest of pine, beech, and birch trees before opening up to reveal the sprawling Chalaadi Glacier descending from Mt. Zuruldi. The trail follows the course of the glacier-fed Chalaadi River, with its milky blue waters creating a striking contrast against the green forest. The final approach brings hikers face-to-face with the glacier's terminus, where massive ice caves occasionally form. The sound of creaking ice and rushing meltwater creates an unforgettable sensory experience against the backdrop of towering mountains.",
-    region: "Svaneti",
+    region: Region.Svaneti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -1110,7 +1111,7 @@ export const trails: HikingTrail[] = [
     title: "David Gareja Monastery Ridge Walk",
     description:
       "This fascinating trail combines natural beauty with rich cultural history, traversing the semi-desert landscape surrounding the ancient David Gareja monastery complex. The path climbs a ridge dividing Georgia and Azerbaijan, offering sweeping views across colorful badlands and arid plains. The monastery itself, carved into the sandstone cliffs in the 6th century, features remarkable frescoes and cave dwellings. The trail continues along the ridge passing multiple cave churches and monastic cells, with each turn revealing new perspectives on this harsh but beautiful landscape. The contrast between the golden rock formations and the occasional green oasis creates a photographer's paradise.",
-    region: "Kakheti",
+    region: Region.Kakheti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -1190,7 +1191,7 @@ export const trails: HikingTrail[] = [
     title: "Prometheus Cave and Canyon Trail",
     description:
       "This unique trail combines natural wonders both above and below ground. Starting at the world-famous Prometheus Cave, one of the largest cave systems in Georgia, the trail emerges to follow a scenic limestone canyon carved by the Tskhaltubo River. After exploring the cave's illuminated chambers with their spectacular stalactites and stalagmites, the path continues along the canyon rim, offering views of the turquoise waters below. Several lookout points provide opportunities to observe the interesting geological formations and lush vegetation that thrives in this microclimate. The trail features several descent points to access swimming holes, particularly refreshing during summer months.",
-    region: "Imereti",
+    region: Region.Imereti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -1272,7 +1273,7 @@ export const trails: HikingTrail[] = [
     title: "Machakhela National Park River Trail",
     description:
       "This enchanting trail follows the crystal-clear Machakhela River through one of Georgia's newest protected areas, showcasing pristine Colchic rainforest ecosystems. The path meanders alongside the river, crossing it several times via wooden bridges and stepping stones. Ancient chestnut, beech, and box trees create a lush canopy overhead, supporting diverse bird species and rare forest flora. The trail passes traditional Adjarian wooden houses and an old water mill before reaching a spectacular waterfall tucked away in a moss-covered gorge. The humid subtropical climate has created a unique ecosystem where Mediterranean and Caucasian species coexist, making it a biodiversity hotspot recognized by UNESCO.",
-    region: "Adjara",
+    region: Region.Adjara,
     difficulty: {
       level: DifficultyLevel.Easy,
       technicalDifficulty: 1,
@@ -1350,7 +1351,7 @@ export const trails: HikingTrail[] = [
     title: "Javakheti Lakes Circuit",
     description:
       "This unique high-plateau trail connects three of Georgia's most stunning alpine lakes in the volcanic Javakheti region. Starting at Lake Paravani, Georgia's largest lake, the path traverses meadows bursting with wildflowers to reach the smaller but equally beautiful Saghamo and Khanchali lakes. The volcanic landscape features interesting lava formations and panoramic views across the Armenian border. This region is renowned for its birdwatching opportunities, particularly during migration seasons when the lakes host numerous waterfowl species. The trail passes several traditional villages where you can observe the distinct culture of the local Armenian-Georgian communities. The high elevation provides relief from summer heat but creates a shorter hiking season.",
-    region: "Samtskhe-Javakheti",
+    region: Region.Samtskhe_Javakheti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -1428,7 +1429,7 @@ export const trails: HikingTrail[] = [
     title: "Racha Alpine Meadows Trek",
     description:
       "This high-altitude trail traverses Georgia's hidden gem - the Racha region, known for its pristine nature and sparse tourism. The path winds through lush alpine meadows dotted with traditional wooden shepherd huts called 'koshki.' Starting from the small village of Glola, the trail steadily climbs through deciduous forests before opening up to panoramic vistas of the Greater Caucasus range. Wildflowers create stunning natural tapestries during late spring and summer. Multiple crystal-clear streams cross the path, providing refreshing water sources. This relatively undiscovered route offers solitude and authentic mountain experiences away from more frequented trails, with opportunities to witness traditional pastoral lifestyles that have remained unchanged for centuries.",
-    region: "Racha-Lechkhumi",
+    region: Region.Racha_Lechkhumi,
     difficulty: {
       level: DifficultyLevel.Difficult,
       technicalDifficulty: 3,
@@ -1512,7 +1513,7 @@ export const trails: HikingTrail[] = [
     title: "Black Sea Coastal Path",
     description:
       "This coastal trail follows the dramatic shoreline of Georgia's Black Sea coast, alternating between secluded pebble beaches and lush subtropical vegetation. Starting near the resort town of Kobuleti, the path traces the coastline, occasionally climbing small cliffs for breathtaking views across the sea and passing through aromatic eucalyptus groves. Small secluded coves provide perfect swimming spots during summer months. The trail passes through several fishing villages where you can sample fresh seafood and observe traditional Black Sea fishing methods. The unique microclimate supports a diverse ecosystem where Mediterranean flora thrives alongside Colchic forest species. The mesmerizing sound of waves accompanies hikers throughout this sensory-rich journey.",
-    region: "Adjara",
+    region: Region.Adjara,
     difficulty: {
       level: DifficultyLevel.Easy,
       technicalDifficulty: 1,
@@ -1585,7 +1586,7 @@ export const trails: HikingTrail[] = [
     title: "Khevsureti Mountain Pass Trek",
     description:
       "This challenging high-mountain trek crosses one of Georgia's most remote and mystical regions, Khevsureti, following ancient paths once used by highlander warriors. Starting from the medieval fortress village of Shatili with its distinctive stone towers, the trail climbs steeply through diverse ecological zones to cross the dramatic Datvisjvari Pass (Bear's Pass) at 2,676m. The path passes abandoned settlements where time seems frozen, with stone shrines still adorned with animal horns from pagan rituals. Weather-beaten stone crosses mark ancient burial grounds and sacred sites. The trail demands physical endurance but rewards hikers with some of Georgia's most dramatic mountain scenery and glimpses into the unique culture of Georgia's highland warriors, who maintained independence through centuries of invasions.",
-    region: "Mtskheta-Mtianeti",
+    region: Region.Mtskheta_Mtianeti,
     difficulty: {
       level: DifficultyLevel.Difficult,
       technicalDifficulty: 4,
@@ -1668,7 +1669,7 @@ export const trails: HikingTrail[] = [
     title: "Didgori Battlefield Heritage Path",
     description:
       "This historically significant trail crosses the Didgori battlefield where King David the Builder won a decisive victory against the Seljuk Turks in 1121, a pivotal moment in Georgian history. The gently rolling path offers expansive views across meadows and foothills where Georgian forces once outmaneuvered a much larger invading army. Several monuments and information boards explain the battle tactics and historical context. The trail continues through oak and beech forests to a small chapel commemorating the victory. Spring brings wildflowers and the chance to see traditional Georgian shepherding practices as flocks are moved to summer pastures. The proximity to Tbilisi makes this an accessible day trip combining moderate hiking with rich historical insights.",
-    region: "Kvemo Kartli",
+    region: Region.Kvemo_Kartli,
     difficulty: {
       level: DifficultyLevel.Easy,
       technicalDifficulty: 1,
@@ -1747,7 +1748,7 @@ export const trails: HikingTrail[] = [
     title: "Aragvi River Gorge Trail",
     description:
       "This picturesque trail follows the dramatic Aragvi River Gorge, one of the main historical routes connecting Georgia to Russia. Starting near the medieval Ananuri fortress complex, the path descends to the river before winding along its banks. The route alternates between dense riverside forests and open sections with views of the steep gorge walls. Several abandoned villages with their distinctive stone structures tell stories of historical mountain life. The trail crosses multiple tributaries via log bridges or stepping stones, providing refreshing spots to cool off during summer hikes. Noteworthy features include a hidden waterfall and remnants of an ancient trading route with worn stone steps. The diverse microclimates support varied flora, from alpine flowers to wild fruit trees.",
-    region: "Mtskheta-Mtianeti",
+    region: Region.Mtskheta_Mtianeti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,
@@ -1825,7 +1826,7 @@ export const trails: HikingTrail[] = [
     title: "Khevi-Khevsureti Connect Route",
     description:
       "This adventurous multi-day trek connects two of Georgia's most remote mountain regions - Khevi and Khevsureti - crossing the spectacular Chaukhi Pass (3,338m). The trail begins near Juta village at the foot of the iconic Chaukhi Massif, often called the 'Georgian Dolomites' for its jagged peaks. The first day involves a challenging ascent through a moonscape of volcanic rock and alpine meadows, with panoramic views extending to Mount Kazbek on clear days. After crossing the high pass, the trail descends into the mystical region of Khevsureti, known for its medieval tower villages and unique cultural traditions. The dramatic landscape changes from alpine to forested valleys with crystal-clear streams. This demanding trek requires proper equipment and preparation but offers one of Georgia's ultimate wilderness experiences.",
-    region: "Mtskheta-Mtianeti",
+    region: Region.Mtskheta_Mtianeti,
     difficulty: {
       level: DifficultyLevel.Difficult,
       technicalDifficulty: 4,
@@ -1917,7 +1918,7 @@ export const trails: HikingTrail[] = [
     title: "Tedzami River Valley Path",
     description:
       "This gentle riverside trail explores the serene Tedzami River Valley, an area rich in biodiversity just an hour from Tbilisi. The path begins at the historic Rkoni Monastery, a 7th-century stone complex partially reclaimed by nature, before following the Tedzami River upstream. The trail weaves through deciduous forests, open meadows, and past several charming wooden water mills. Numerous bird species inhabit the valley, making it a paradise for birdwatchers, especially during migration seasons. Several natural pools along the river provide perfect swimming spots during summer months. The trail features remnants of Georgia's industrial heritage, including an abandoned Soviet-era mineral water factory whose buildings are now covered in colorful graffiti art. The relatively flat terrain makes this an accessible but rewarding hike for all ages.",
-    region: "Shida Kartli",
+    region: Region.Shida_Kartli,
     difficulty: {
       level: DifficultyLevel.Easy,
       technicalDifficulty: 1,
@@ -1990,7 +1991,7 @@ export const trails: HikingTrail[] = [
     title: "Pshav-Khevsureti Range Traverse",
     description:
       "This challenging high-altitude traverse crosses the remote Pshav-Khevsureti mountain range, connecting villages that were once important centers of pagan traditions later blended with Christianity. The trail begins at the Pshavi village of Shuapkho and climbs steadily through spruce forests into alpine meadows dotted with rhododendrons. After crossing the windswept Khadotani Pass (2,900m), the trail offers spectacular panoramic views before descending into Khevsureti's Arkhoti Valley. Along the way, hikers pass several 'khati' - sacred shrines where ancient pagan rituals are still performed annually. The trail requires self-sufficiency and good navigation skills, but rewards adventurers with pristine wilderness and insights into Georgia's most mystical mountain cultures. Weather can change rapidly at these elevations, demanding appropriate gear and experience.",
-    region: "Mtskheta-Mtianeti",
+    region: Region.Mtskheta_Mtianeti,
     difficulty: {
       level: DifficultyLevel.Difficult,
       technicalDifficulty: 5,
@@ -2074,7 +2075,7 @@ export const trails: HikingTrail[] = [
     title: "Vardzia Cave City and Khertvisi Loop",
     description:
       "This fascinating cultural trail combines two of Georgia's most impressive historical monuments with beautiful landscape hiking. Starting from the 12th-century Vardzia cave city, dramatically carved into a cliff face, the trail follows an ancient pilgrimage route along the Mtkvari River valley. After exploring the honeycomb-like cave monastery with its hidden church and wine cellars, the path continues through a semi-desert landscape with unique volcanic formations. The trail climbs to panoramic viewpoints offering views across to Armenia before reaching the imposing Khertvisi Fortress, one of Georgia's oldest and most strategic castles. The loop returns along the opposite side of the valley through traditional villages where you can observe rural Georgian life and farming practices. Spring brings colorful wildflowers to this otherwise arid landscape.",
-    region: "Samtskhe-Javakheti",
+    region: Region.Samtskhe_Javakheti,
     difficulty: {
       level: DifficultyLevel.Moderate,
       technicalDifficulty: 2,

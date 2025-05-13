@@ -96,9 +96,26 @@
       "water": "წყლის წყარო"
     }
   },
-    "available":"ხელმისაწვდომია",
-  "not_available":"არაა ხელმისაწვდომი",
+  "available": "ხელმისაწვდომია",
+  "not_available": "არაა ხელმისაწვდომი",
   "description": "აღწერილობა",
-    "highlights": "მნიშვნელოვანი მომენტები",
-  "hazards": "საფრთხეები"
+  "highlights": "მნიშვნელოვანი მომენტები",
+  "hazards": "საფრთხეები",
+  "filters": {
+    "searchPlaceholder": "ძიება სათაურით ან ტეგებით...",
+    "filtersButton": "ფილტრები",
+    "filterOptions": "ფილტრის პარამეტრები",
+    "difficulty": "სირთულე",
+    "allDifficulties": "ყველა სირთულე",
+    "distance": "მანძილი",
+    "allDistances": "ყველა მანძილი",
+    "duration": "ხანგრძლივობა",
+    "allDurations": "ყველა ხანგრძლივობა",
+    "region": "რეგიონი",
+    "allRegions": "ყველა რეგიონი",
+    "resetFilters": "ფილტრების გასუფთავება",
+    "km": "კმ",
+    "hours": "საათი",
+    "noResults": "თქვენი ფილტრებით ბილიკები ვერ მოიძებნა. სცადეთ ძიების კრიტერიუმების შეცვლა."
+  }
 }
