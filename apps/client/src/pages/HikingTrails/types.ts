@@ -97,6 +97,7 @@ export enum Region {
 export interface HikingTrail {
   id: number;
   title: string;
+  georgianTitle?: string; // Added Georgian title field
   description: string;
   region: Region;
   difficulty: Difficulty;
