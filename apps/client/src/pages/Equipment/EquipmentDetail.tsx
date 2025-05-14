@@ -291,7 +291,7 @@ const EquipmentDetail: React.FC = () => {
                         {/* Recommended For */}
                         <div className="bg-white p-6 rounded-lg shadow-md mb-6">
                             <h2 className="text-xl font-bold mb-4">
-                                {t('equipment.recommendedFor')}
+                                {t('equipment.recommendedFor1')}
                             </h2>
 
                             <div className="space-y-4">
