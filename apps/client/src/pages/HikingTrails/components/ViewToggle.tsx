@@ -11,7 +11,7 @@ interface ViewToggleProps {
 export const ViewToggle: React.FC<ViewToggleProps> = ({ viewMode, onToggle, setViewMode }) => {
     return (
         <div className="flex justify-between items-center mb-6">
-            <h1 className="text-2xl font-bold">Hiking Trails</h1>
+            <h1 className="text-2xl font-bold"></h1>
 
             <div className="flex items-center gap-2">
                 <span className="text-sm text-gray-700">Grid</span>

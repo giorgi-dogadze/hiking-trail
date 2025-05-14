@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { Footer, Header } from '@/components/core';
 import { equipments } from './equipments.data';
 import EquipmentCard from './components/EquipmentCard';
-import ViewToggle from '../HikingTrails/components/ViewToggle';
 import EquipmentFilters, { EquipmentFilterOptions } from './components/EquipmentFilters';
 import { filterEquipments } from './utils/equipment-filter.utils';
+import ViewToggle from '../Events/components/ViewToggle';
 
 const EquipmentList: React.FC = () => {
     const { t } = useTranslation();
@@ -48,15 +48,16 @@ const EquipmentList: React.FC = () => {
             />
 
             <main className="container mx-auto py-8 px-4">
-                <h1 className="text-3xl font-bold mb-8 text-center">
-                    {t('equipment.title')}
-                </h1>
 
-                <ViewToggle
-                    onToggle={handleViewModeToggle}
-                    viewMode={viewMode}
-                    setViewMode={setViewMode}
-                />
+
+                <h1 className="text-3xl font-bold mb-6"> {t('equipment.title')}</h1>
+
+                <div className="flex justify-between items-center mb-6">
+                    <div className="text-sm text-gray-500">
+                        {filteredEquipment.length}   {t('equipment.title')}
+                    </div>
+                    <ViewToggle onToggle={handleViewModeToggle} viewMode={viewMode} setViewMode={setViewMode} />
+                </div>
 
                 {filteredEquipment.length > 0 ? (
                     <div className={

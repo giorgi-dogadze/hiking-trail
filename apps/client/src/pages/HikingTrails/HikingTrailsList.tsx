@@ -3,10 +3,10 @@ import React, { memo, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { trails } from './trails.data';
 import TrailCard from './components/TrailCard';
-import ViewToggle from './components/ViewToggle';
 import TrailFilters, { FilterOptions } from './components/TrailFilters';
 import { filterTrails } from './utils/filter.utils';
 import { useTranslation } from 'react-i18next';
+import ViewToggle from '../Events/components/ViewToggle';
 
 const HikingTrailsList: React.FC = () => {
     const { t } = useTranslation();
@@ -44,8 +44,14 @@ const HikingTrailsList: React.FC = () => {
                 onFilterChange={handleFiltersChange}
             />
             <main className="container mx-auto py-8 px-4">
+                <h1 className="text-3xl font-bold mb-6">{t('header.nav.hikingTrails')}</h1>
 
-                <ViewToggle onToggle={handleViewModeToggle} viewMode={viewMode} setViewMode={setViewMode} />
+                <div className="flex justify-between items-center mb-6">
+                    <div className="text-sm text-gray-500">
+                        {filteredTrails.length} {t('header.nav.hikingTrails')}
+                    </div>
+                    <ViewToggle onToggle={handleViewModeToggle} viewMode={viewMode} setViewMode={setViewMode} />
+                </div>
 
                 {filteredTrails.length > 0 ? (
                     <div className={

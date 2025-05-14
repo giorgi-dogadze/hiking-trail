@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Footer, Header } from '@/components/core';
 import { equipments, Equipment, AvailabilityStatus, SeasonRating } from './equipments.data';
-import { ArrowLeft, Package, Weight, Ruler, Palette, Cloud, Calendar, Award, Check, X, Star, Tag, Info, Globe, Recycle, Clock, Heart, Shield } from 'lucide-react';
+import { ArrowLeft, Package, Ruler, Palette, Cloud, Calendar, Check, X, Star, Tag, Info, Globe, Recycle, Clock, Heart, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
