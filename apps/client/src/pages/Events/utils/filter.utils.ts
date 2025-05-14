@@ -1,4 +1,4 @@
-import { HikingEvent, DifficultyLevel, TripStatus } from '../types';
+import { HikingEvent } from '../types';
 import { EventFilterOptions } from '../components/EventFilters';
 
 // Helper to check if a number is within a range (format: "min-max" or "min+")

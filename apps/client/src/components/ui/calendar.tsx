@@ -34,7 +34,7 @@ function Calendar({
                 nav_button_previous: "absolute left-1",
                 nav_button_next: "absolute right-1",
                 table: "w-full border-collapse space-y-1",
-                head_row: "flex",
+                head_row: "hidden", // Hide the day names row
                 head_cell:
                     "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
                 row: "flex w-full mt-2",
@@ -53,14 +53,24 @@ function Calendar({
                 ...classNames,
             }}
             components={{
-                IconLeft: () => <ChevronLeft className="h-4 w-4" />,
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                //@ts-expect-error
                 IconRight: () => <ChevronRight className="h-4 w-4" />,
+                IconLeft: () => <ChevronLeft className="h-4 w-4" />,
             }}
             styles={{
                 caption: { position: 'relative' },
                 day: { margin: 0 },
                 head_cell: { width: '2rem', textAlign: 'center' },
                 cell: { width: '2rem' }
+            }}
+            formatters={{
+                // Format the month to make it translatable
+                formatCaption: (date, options) => {
+                    const month = date.toLocaleString(typeof options?.locale === 'string' ? options.locale : 'default', { month: 'long' });
+                    const year = date.getFullYear();
+                    return `${month} ${year}`;
+                }
             }}
             {...props}
         />

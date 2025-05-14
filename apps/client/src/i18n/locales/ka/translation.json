@@ -278,6 +278,31 @@
       "gel": "ლარი",
       "fromDate": "საწყისი",
       "toDate": "საბოლოო"
+    },
+    "calendar": {
+      "months": {
+        "january": "იანვარი",
+        "february": "თებერვალი",
+        "march": "მარტი",
+        "april": "აპრილი",
+        "may": "მაისი",
+        "june": "ივნისი",
+        "july": "ივლისი",
+        "august": "აგვისტო",
+        "september": "სექტემბერი",
+        "october": "ოქტომბერი",
+        "november": "ნოემბერი",
+        "december": "დეკემბერი"
+      },
+      "days": {
+        "monday": "ორშაბათი",
+        "tuesday": "სამშაბათი",
+        "wednesday": "ოთხშაბათი",
+        "thursday": "ხუთშაბათი",
+        "friday": "პარასკევი",
+        "saturday": "შაბათი",
+        "sunday": "კვირა"
+      }
     }
   }
 }

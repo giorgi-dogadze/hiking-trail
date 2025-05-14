@@ -68,7 +68,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, viewMode, onClick }) => {
                 {/* Event Image */}
                 <div className="relative">
                     <img
-                        src={event.images[0] || '/images/events/default.jpg'}
+                        src={event.images[0]}
                         alt={event.title}
                         className="w-full h-48 object-cover"
                     />

@@ -13,8 +13,6 @@ import { Button } from '@/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { useTranslation } from 'react-i18next';
 import { DatePicker } from '@/components/ui/date-picker';
-// Import the calendar styles
-import '@/styles/calendar-styles.css';
 
 export interface EventFilterOptions {
     search: string;
