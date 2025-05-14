@@ -214,5 +214,72 @@
       "sustainable": "Sustainable",
       "recyclable": "Recyclable"
     }
+  },
+  "events": {
+    "title": "Upcoming Hiking Events",
+    "eventsFound": "events found",
+    "noResults": "No events match your filters. Try adjusting your search criteria.",
+    "viewToggle": {
+      "grid": "Grid View",
+      "list": "List View",
+      "gridView": "Switch to grid view",
+      "listView": "Switch to list view"
+    },
+    "card": {
+      "days": "days",
+      "hours": "hours",
+      "dates": "Dates",
+      "duration": "Duration",
+      "distance": "Distance",
+      "includes": "Includes",
+      "food": "Food",
+      "accommodation": "Accommodation",
+      "participants": "participants",
+      "spotsLeft": "{{count}} spot left",
+      "spotsLeft_plural": "{{count}} spots left",
+      "fullyBooked": "Fully booked",
+      "limitedSpots": "Only {{count}} spot left!",
+      "limitedSpots_plural": "Only {{count}} spots left!",
+      "deadline": "Register by",
+      "registerBy": "Register by"
+    },
+    "difficulty": {
+      "EASY": "Easy",
+      "MODERATE": "Moderate",
+      "CHALLENGING": "Challenging",
+      "DIFFICULT": "Difficult",
+      "EXTREME": "Extreme"
+    },
+    "status": {
+      "UPCOMING": "Upcoming",
+      "ONGOING": "Ongoing",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled"
+    },
+    "filters": {
+      "searchPlaceholder": "Search by title, description or location...",
+      "filtersButton": "Filters",
+      "filterOptions": "Filter Options",
+      "difficulty": "Difficulty",
+      "allDifficulties": "All Difficulties",
+      "price": "Price",
+      "allPrices": "All Prices",
+      "distance": "Distance",
+      "allDistances": "All Distances",
+      "duration": "Duration",
+      "allDurations": "All Durations",
+      "status": "Status",
+      "allStatuses": "All Statuses",
+      "dateRange": "Date Range",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "selectDate": "Select a date",
+      "resetFilters": "Reset Filters",
+      "km": "km",
+      "days": "days",
+      "gel": "GEL",
+      "fromDate": "From",
+      "toDate": "To"
+    }
   }
 }
