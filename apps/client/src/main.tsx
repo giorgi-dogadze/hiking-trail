@@ -8,7 +8,7 @@ import { LanguageProvider } from './context/LanguageContext';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/hiking-trail">
       <LanguageProvider>
         <App />
       </LanguageProvider>
