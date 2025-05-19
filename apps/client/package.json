@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://giorgi-dogadze.github.io/hiking-trail",
+  "homepage": "https://giorgi-dogadze.github.io/hiking-trail",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "check-ts": "tsc --noEmit"
   },
