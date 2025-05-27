@@ -40,6 +40,7 @@
   "hikingRoutes": {
     "title": "Best Hiking Routes",
     "viewRoute": "View Route",
+    "difficultyLevel": "Difficulty Level",
     "difficulty": {
       "Easy": "Easy",
       "Moderate": "Moderate",
@@ -74,6 +75,12 @@
     "information": {
       "title": "Trail Information",
       "trailType": "Trail Type",
+      "trailTypeTypes":{
+        "Loop": "Loop",
+        "OutAndBack": "Out And Back",
+        "PointToPoint": "Point To Point",
+        "Linear": "Linear"
+      },
       "length": "Length",
       "estimatedTime": "Estimated Time",
       "elevation": "Elevation",
@@ -361,6 +368,16 @@
       "ESSENTIAL": "Essential",
       "RECOMMENDED": "Recommended",
       "OPTIONAL": "Optional"
+    },
+    "weather": {
+      "SUNNY": "Sunny",
+      "CLOUDY": "Cloudy",
+      "RAINY": "Rainy"
+    },
+    "terrainType": {
+      "MOUNTAINOUS": "Mountainous",
+      "HILLY": "Hilly",
+      "RIVER_CROSSING": "River crossing "
     }
   }
 }

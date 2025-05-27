@@ -18,7 +18,7 @@ const TrailInformation: React.FC<TrailInformationProps> = ({ trail }) => {
             <CardContent className="space-y-3">
                 <div>
                     <p className="text-sm font-medium text-gray-500">{t('trail.information.trailType')}</p>
-                    <p>{trail.trailType}</p>
+                    <p>{t(`trail.information.trailTypeTypes.${trail.trailType}`)}</p>
                 </div>
                 <div>
                     <p className="text-sm font-medium text-gray-500">{t('trail.information.length')}</p>

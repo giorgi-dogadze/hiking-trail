@@ -53,7 +53,7 @@ const EventFilters: React.FC<EventFiltersProps> = ({ filters, onFilterChange }) 
     const durationRanges = ['all', '1-2', '3-5', '6-10', '10+'];
 
     return (
-        <div className='bg-[#2B6BE7] relative'>
+        <div className='bg-[#2B6BE7] relative my-10 sm:my-4 md:my-2 xl:my-0'>
             <svg
                 className="absolute top-0 left-0 w-full transform translate-y-[-98%] rotate-180"
                 height="50"

@@ -40,6 +40,7 @@
   "hikingRoutes": {
     "title": "საუკეთესო საფეხმავლო მარშრუტები",
     "viewRoute": "მარშრუტის ნახვა",
+    "difficultyLevel": "სირთულის დონე",
     "difficulty": {
       "Easy": "მარტივი",
       "Moderate": "საშუალო",
@@ -74,6 +75,12 @@
     "information": {
       "title": "მარშრუტის ინფორმაცია",
       "trailType": "მარშრუტის ტიპი",
+      "trailTypeTypes":{
+        "Loop": "წრიული",
+        "OutAndBack": "გადაბმული",
+        "PointToPoint": "წერტილიდან წერტილამდე",
+        "Linear": "წრფივი"
+      },
       "length": "სიგრძე",
       "estimatedTime": "სავარაუდო დრო",
       "elevation": "სიმაღლე",
@@ -360,6 +367,16 @@
       "ESSENTIAL": "აუცილებელი",
       "RECOMMENDED": "რეკომენდებული",
       "OPTIONAL": "არჩევითი"
+    },
+    "weather": {
+      "SUNNY": "მზიანი",
+      "CLOUDY": "ღრუბლიანი",
+      "RAINY": "წვიმიანი"
+    },
+    "terrainType": {
+      "MOUNTAINOUS": "მთიანი",
+      "HILLY": "გორაკიანი",
+      "RIVER_CROSSING": "გადასასვლელი მდინარე"
     }
   }
 }

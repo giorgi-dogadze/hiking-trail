@@ -12,10 +12,10 @@ export enum RecommendedExperience {
 }
 
 export enum TrailType {
-  Loop = "Loop",
-  OutAndBack = "Out and back",
-  PointToPoint = "Point-to-point",
-  Linear="Linear"
+  Loop="Loop",
+OutAndBack="OutAndBack",
+PointToPoint="PointToPoint",
+Linear="Linear",
 }
 
 export enum LengthUnit {

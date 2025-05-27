@@ -29,7 +29,7 @@ const EventReviews: React.FC<EventReviewsProps> = ({ reviews }) => {
     return (
         <div className="bg-white rounded-lg shadow p-6">
             <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">{t('reviews')}</h2>
+                <h2 className="text-2xl font-bold">{t('events.reviews')}</h2>
                 <div className="flex items-center bg-blue-50 px-3 py-1 rounded-full">
                     <Star className="h-5 w-5 text-yellow-500 mr-1" />
                     <span className="font-bold">{averageRating.toFixed(1)}</span>

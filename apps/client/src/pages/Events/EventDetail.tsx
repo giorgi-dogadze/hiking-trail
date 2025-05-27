@@ -20,10 +20,10 @@ import EventImageGallery from './components/EventImageGallery';
 import EventItineraryTimeline from './components/EventItineraryTimeline';
 import EventEquipmentList from './components/EventEquipmentList';
 import EventRegistrationCard from './components/EventRegistrationCard';
-import EventLocationMap from './components/EventLocationMap';
 import EventReviews from './components/EventReviews';
 import EventFAQ from './components/EventFAQ';
 import { Footer, Header } from '@/components/core';
+import EventLocationMap from './components/EventLocationMap/EventLocationMap';
 
 const EventDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -158,7 +158,7 @@ const EventDetail: React.FC = () => {
                             <TabsList className="w-full border-b p-0 bg-transparent">
                                 <TabsTrigger value="itinerary" className="flex-1 py-4 rounded-none data-[state=active]:border-b-2 data-[state=active]:border-primary">
                                     <GitFork className="w-4 h-4 mr-2" />
-                                    {t('itinerary')}
+                                    {t('events.itinerary')}
                                 </TabsTrigger>
                                 <TabsTrigger value="highlights" className="flex-1 py-4 rounded-none data-[state=active]:border-b-2 data-[state=active]:border-primary">
                                     <Star className="w-4 h-4 mr-2" />
@@ -321,6 +321,8 @@ const EventDetail: React.FC = () => {
                                 lat={event.location.coordinates.latitude}
                                 lng={event.location.coordinates.longitude}
                                 name={event.location.name}
+                                showMestiaToUshguliRoute
+                                event={event}
                             />
                         </div>
 
@@ -450,7 +452,7 @@ const EventDetail: React.FC = () => {
                             <h3 className="text-lg font-bold mb-3">{t('events.tourDetails')}</h3>
                             <dl className="space-y-3">
                                 <div className="flex justify-between">
-                                    <dt className="text-gray-500">{t('events.difficulty')}</dt>
+                                    <dt className="text-gray-500">{t('hikingRoutes.difficultyLevel')}</dt>
                                     <dd className="font-medium">{t(`events.difficulty.${event.difficulty}`)}</dd>
                                 </div>
                                 <div className="flex justify-between">
@@ -459,8 +461,12 @@ const EventDetail: React.FC = () => {
                                 </div>
                                 <div className="flex justify-between">
                                     <dt className="text-gray-500">{t('events.terrain')}</dt>
-                                    <dd className="font-medium">
-                                        {event.terrain.map(t => t).join(', ')}
+                                    <dd className="font-medium text-right">
+                                        {event.terrain.map((item, index) => (
+                                            <Badge key={index} variant="outline" className="bg-blue-50 text-xs">
+                                                {t(`events.terrainType.${item}`)}
+                                            </Badge>
+                                        ))}
                                     </dd>
                                 </div>
                                 <div className="flex justify-between">
@@ -473,7 +479,7 @@ const EventDetail: React.FC = () => {
                                         <div className="flex flex-wrap gap-1">
                                             {event.expectedWeather.map((weather, index) => (
                                                 <Badge key={index} variant="outline" className="bg-blue-50 text-xs">
-                                                    {weather}
+                                                    {t(`events.weather.${weather}`)}
                                                 </Badge>
                                             ))}
                                         </div>

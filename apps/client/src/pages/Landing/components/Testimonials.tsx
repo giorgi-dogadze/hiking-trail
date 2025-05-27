@@ -7,18 +7,18 @@ export const Testimonials: React.FC = () => {
 
     const feedback = [
         {
-            name: "Ana Kalandadze",
-            text: "The hiking trails suggested on this site were amazing! Our family had a wonderful time exploring Kazbegi.",
+            name: "ანა კალანდაძე",
+            text: "ამ საიტზე შემოთავაზებული ლაშქრობის ბილიკები საოცარი იყო! ჩვენს ოჯახს შესანიშნავი დრო ჰქონდა ყაზბეგის შესწავლაში.",
             avatar: "/images/avatar1.jpg",
         },
         {
-            name: "David Nozadze",
-            text: "I found my favorite trail through this platform. The detailed maps and difficulty ratings were very helpful.",
+            name: "დავით ნოზაძე",
+            text: "ჩემი საყვარელი ბილიკი ამ პლატფორმის საშუალებით ვიპოვე. დეტალური რუკები და სირთულის შეფასებები ძალიან სასარგებლო იყო.",
             avatar: "/images/avatar2.jpg",
         },
         {
-            name: "Mari Tsuladze",
-            text: "The equipment recommendations were spot on. I rented everything I needed for my Borjomi trek through this site.",
+            name: "მარი წულაძე",
+            text: "აღჭურვილობის რეკომენდაციები ზუსტი იყო. ყველაფერი, რაც ბორჯომის ლაშქრობისთვის მჭირდებოდა, ამ საიტიდან ვიქირავე.",
             avatar: "/images/avatar3.jpg",
         },
     ];

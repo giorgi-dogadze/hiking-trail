@@ -160,7 +160,6 @@ export const hikingEvents: HikingEvent[] = [
         canBeRented: false,
       },
     ],
-
     itinerary: [
       {
         dayNumber: 1,
@@ -173,8 +172,8 @@ export const hikingEvents: HikingEvent[] = [
             name: "მესტია",
             description: "ზემო სვანეთის ადმინისტრაციული ცენტრი",
             coordinates: {
-              latitude: 43.0428,
-              longitude: 42.7349,
+              latitude: 43.0423,
+              longitude: 42.7299,
             },
             estimatedArrivalTime: new Date("2025-08-10T09:00:00"),
             facilities: ["სასტუმრო", "კაფე", "მაღაზია", "საპირფარეშო"],
@@ -184,8 +183,8 @@ export const hikingEvents: HikingEvent[] = [
             name: "ლამარიის ეკლესია",
             description: "XII საუკუნის ეკლესია უნიკალური ფრესკებით",
             coordinates: {
-              latitude: 43.0401,
-              longitude: 42.6945,
+              latitude: 43.0375,
+              longitude: 42.7001,
             },
             estimatedArrivalTime: new Date("2025-08-10T12:30:00"),
             facilities: ["დასასვენებელი ადგილი"],
@@ -195,8 +194,8 @@ export const hikingEvents: HikingEvent[] = [
             name: "ჟაბეში",
             description: "პატარა სვანური სოფელი, ღამის გასათევი ადგილი",
             coordinates: {
-              latitude: 43.0118,
-              longitude: 42.6018,
+              latitude: 42.9900,
+              longitude: 42.8100,
             },
             estimatedArrivalTime: new Date("2025-08-10T17:00:00"),
             facilities: ["საოჯახო სასტუმრო", "საპირფარეშო", "სასმელი წყალი"],
@@ -215,8 +214,8 @@ export const hikingEvents: HikingEvent[] = [
             name: "ტვიბერის მდინარე",
             description: "მდინარეზე გადასასვლელი ხიდი",
             coordinates: {
-              latitude: 42.9934,
-              longitude: 42.5782,
+              latitude: 42.9730,
+              longitude: 42.8400,
             },
             estimatedArrivalTime: new Date("2025-08-11T11:00:00"),
             facilities: ["დასასვენებელი ადგილი", "სასმელი წყალი"],
@@ -226,8 +225,8 @@ export const hikingEvents: HikingEvent[] = [
             name: "ადილა",
             description: "მცირე დასახლება, სადაც ღამეს გავათევთ",
             coordinates: {
-              latitude: 42.9801,
-              longitude: 42.5614,
+              latitude: 42.9550,
+              longitude: 42.8700,
             },
             estimatedArrivalTime: new Date("2025-08-11T16:00:00"),
             facilities: ["საოჯახო სასტუმრო", "საპირფარეშო"],
@@ -246,8 +245,8 @@ export const hikingEvents: HikingEvent[] = [
             name: "ანგურის წყალვარდნილები",
             description: "შთამბეჭდავი წყალვარდნილები მაღალი კლდეებიდან",
             coordinates: {
-              latitude: 42.9635,
-              longitude: 42.5329,
+              latitude: 42.9400,
+              longitude: 42.9000,
             },
             estimatedArrivalTime: new Date("2025-08-12T12:30:00"),
             facilities: ["პიკნიკის ადგილი"],
@@ -257,8 +256,8 @@ export const hikingEvents: HikingEvent[] = [
             name: "იფარი",
             description: "ისტორიული სოფელი უძველესი კოშკებით",
             coordinates: {
-              latitude: 42.9475,
-              longitude: 42.5201,
+              latitude: 42.9300,
+              longitude: 42.9300,
             },
             estimatedArrivalTime: new Date("2025-08-12T17:00:00"),
             facilities: ["სასტუმრო", "კაფე", "საპირფარეშო"],
@@ -277,8 +276,8 @@ export const hikingEvents: HikingEvent[] = [
             name: "პანორამული წერტილი",
             description: "ადგილი, საიდანაც ჩანს შხარა და უშბის მწვერვალები",
             coordinates: {
-              latitude: 42.9327,
-              longitude: 42.4991,
+              latitude: 42.9200,
+              longitude: 42.9700,
             },
             estimatedArrivalTime: new Date("2025-08-13T11:30:00"),
             facilities: ["დასასვენებელი ადგილი"],
@@ -289,8 +288,8 @@ export const hikingEvents: HikingEvent[] = [
             description:
               "UNESCO-ს მსოფლიო მემკვიდრეობის ნუსხაში შეტანილი სოფელი",
             coordinates: {
-              latitude: 42.9173,
-              longitude: 42.4932,
+              latitude: 42.9149,
+              longitude: 43.0133,
             },
             estimatedArrivalTime: new Date("2025-08-13T16:00:00"),
             facilities: ["სასტუმრო", "კაფე", "მუზეუმი", "საპირფარეშო"],
@@ -299,7 +298,6 @@ export const hikingEvents: HikingEvent[] = [
         ],
       },
     ],
-
     highlights: [
       "UNESCO-ს მსოფლიო მემკვიდრეობაში შეტანილი უშგულის თემი",
       "X-XII საუკუნეების სვანური კოშკები",
