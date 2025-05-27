@@ -44,7 +44,9 @@
     "difficulty": {
       "Easy": "მარტივი",
       "Moderate": "საშუალო",
-      "Difficult": "რთული"
+      "Difficult": "რთული",
+            "Hard": "რთული"
+
     }
   },
   "testimonials": {

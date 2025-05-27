@@ -12,9 +12,9 @@ export const BestHikingRoutes: React.FC = () => {
 
     const getDifficultyTranslation = (difficulty: string) => {
         switch (difficulty.toLowerCase()) {
-            case 'easy': return t('hikingRoutes.difficulty.easy');
-            case 'moderate': return t('hikingRoutes.difficulty.moderate');
-            case 'hard': return t('hikingRoutes.difficulty.hard');
+            case 'easy': return t('hikingRoutes.difficulty.Easy');
+            case 'moderate': return t('hikingRoutes.difficulty.Moderate');
+            case 'hard': return t('hikingRoutes.difficulty.Hard');
             default: return difficulty;
         }
     };

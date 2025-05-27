@@ -16,7 +16,7 @@ export const CTASection: React.FC = () => {
                     <Button variant="default" className="bg-white text-blue-600 hover:bg-gray-100">
                         {t('cta.signUp')}
                     </Button>
-                    <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                    <Button variant="default" className="bg-white text-blue-600 hover:bg-gray-100">
                         {t('cta.learnMore')}
                     </Button>
                 </div>

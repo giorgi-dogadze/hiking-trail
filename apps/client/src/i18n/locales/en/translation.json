@@ -44,7 +44,8 @@
     "difficulty": {
       "Easy": "Easy",
       "Moderate": "Moderate",
-      "Difficult": "Difficult"
+      "Difficult": "Difficult",
+      "Hard": "Hard"
     }
   },
   "testimonials": {
