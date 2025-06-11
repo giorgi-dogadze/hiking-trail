@@ -29,7 +29,7 @@ const EventImageGallery: React.FC<EventImageGalleryProps> = ({ images, title }) 
     return (
         <>
             <div className="bg-white rounded-lg shadow p-6">
-                <h2 className="text-2xl font-bold mb-4">{t('gallery')}</h2>
+                <h2 className="text-2xl font-bold mb-4">{t('events.gallery')}</h2>
                 <div className="grid grid-cols-4 gap-2">
                     <div className="col-span-2 row-span-2">
                         <img
